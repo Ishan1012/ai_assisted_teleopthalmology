@@ -1,0 +1,1001 @@
+Patient_ID,True_Condition_Urgent,NLP_Urgency,Cornea_Risk,Gaze_Attention,Final_Score,Risk_Category
+1,False,Routine,Low Risk,Moderate,98.39989966327201,Low Health Risk
+2,False,Emergency,Low Risk,Moderate,56.36271683070677,High Health Risk
+3,True,Routine,Low Risk,Moderate,100.0,Low Health Risk
+4,False,Routine,Low Risk,High,99.52984796506865,Low Health Risk
+5,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+6,False,Routine,Low Risk,High,100.0,Low Health Risk
+7,False,Routine,Low Risk,Low,93.52171670426418,Low Health Risk
+8,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+9,False,Routine,Low Risk,High,99.55470915875793,Low Health Risk
+10,False,Routine,Low Risk,Low,92.1797002277316,Low Health Risk
+11,True,Emergency,Low Risk,High,60.313168514449686,Moderate Health Risk
+12,False,Urgent,High Risk Lesion,Moderate,54.03466510250692,High Health Risk
+13,False,Routine,Moderate Anomaly Detected,Moderate,89.65703668950896,Low Health Risk
+14,False,Routine,Low Risk,High,98.44356328324733,Low Health Risk
+15,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+16,False,Routine,High Risk Lesion,High,69.57402202566398,Moderate Health Risk
+17,False,Routine,Moderate Anomaly Detected,Moderate,81.23177898276283,Moderate Health Risk
+18,False,Routine,Low Risk,Low,94.4076735403601,Low Health Risk
+19,False,Routine,Low Risk,High,99.35046068561451,Low Health Risk
+20,False,Routine,Low Risk,High,99.01566165573738,Low Health Risk
+21,False,Routine,Low Risk,High,100.0,Low Health Risk
+22,False,Routine,Low Risk,High,100.0,Low Health Risk
+23,False,Routine,Moderate Anomaly Detected,Moderate,82.18896904475842,Moderate Health Risk
+24,False,Routine,Moderate Anomaly Detected,Moderate,85.70126345975635,Low Health Risk
+25,False,Routine,Low Risk,High,100.0,Low Health Risk
+26,True,Emergency,Moderate Anomaly Detected,High,47.04683389932155,High Health Risk
+27,False,Routine,Low Risk,Moderate,98.9674091636018,Low Health Risk
+28,True,Urgent,Low Risk,Moderate,79.38306626922552,Moderate Health Risk
+29,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+30,False,Routine,High Risk Lesion,Low,64.31198920056991,Moderate Health Risk
+31,False,Routine,Low Risk,High,100.0,Low Health Risk
+32,False,Routine,Low Risk,High,99.00184727442233,Low Health Risk
+33,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+34,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+35,True,Emergency,Moderate Anomaly Detected,High,42.60747911527753,High Health Risk
+36,False,Urgent,Low Risk,High,80.5087509351816,Moderate Health Risk
+37,False,Routine,Low Risk,Low,91.07886954106439,Low Health Risk
+38,False,Routine,Low Risk,Moderate,99.43796460487903,Low Health Risk
+39,False,Routine,Low Risk,High,98.02073945109595,Low Health Risk
+40,False,Urgent,Moderate Anomaly Detected,Moderate,66.24014666444867,Moderate Health Risk
+41,False,Routine,High Risk Lesion,High,65.39695925894671,Moderate Health Risk
+42,True,Emergency,Low Risk,High,67.25424649082336,Moderate Health Risk
+43,True,Urgent,Low Risk,High,85.55069324602694,Low Health Risk
+44,False,Routine,Low Risk,High,98.10140297366183,Low Health Risk
+45,False,Urgent,Low Risk,Moderate,79.53562713931856,Moderate Health Risk
+46,True,Emergency,High Risk Lesion,High,30.24588199969663,High Health Risk
+47,False,Routine,Low Risk,High,98.16291520927588,Low Health Risk
+48,False,Routine,Moderate Anomaly Detected,High,86.39565204086445,Low Health Risk
+49,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+50,False,Urgent,Low Risk,Moderate,77.02627976296833,Moderate Health Risk
+51,False,Routine,Low Risk,High,100.0,Low Health Risk
+52,False,Routine,Low Risk,Moderate,98.8583564788335,Low Health Risk
+53,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+54,True,Emergency,Low Risk,High,54.10702302886697,High Health Risk
+55,False,Routine,Moderate Anomaly Detected,High,79.74541928763897,Moderate Health Risk
+56,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+57,False,Routine,Low Risk,Low,94.98184490883173,Low Health Risk
+58,False,Emergency,Low Risk,Moderate,59.77853523220602,High Health Risk
+59,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+60,False,Routine,Low Risk,High,99.76612200549351,Low Health Risk
+61,False,Routine,Low Risk,Low,92.01957952850174,Low Health Risk
+62,False,Routine,Moderate Anomaly Detected,Moderate,91.09818117315278,Low Health Risk
+63,False,Routine,High Risk Lesion,High,72.33054231532967,Moderate Health Risk
+64,False,Routine,High Risk Lesion,High,68.11916353616108,Moderate Health Risk
+65,False,Routine,Moderate Anomaly Detected,Moderate,82.1396316142008,Moderate Health Risk
+66,False,Emergency,Low Risk,Moderate,71.6971981864833,Moderate Health Risk
+67,True,Urgent,High Risk Lesion,Low,45.32770256483553,High Health Risk
+68,False,Routine,High Risk Lesion,High,73.99201404038392,Moderate Health Risk
+69,False,Routine,Low Risk,High,99.55307353595948,Low Health Risk
+70,False,Routine,High Risk Lesion,Low,64.34657833395495,Moderate Health Risk
+71,False,Routine,High Risk Lesion,High,70.86507999553397,Moderate Health Risk
+72,True,Emergency,Low Risk,High,59.79080455553228,High Health Risk
+73,True,Emergency,Moderate Anomaly Detected,High,57.21451235499259,High Health Risk
+74,True,Emergency,High Risk Lesion,Moderate,30.757713183685194,High Health Risk
+75,False,Routine,Low Risk,High,98.82891059603223,Low Health Risk
+76,False,Routine,Low Risk,High,100.0,Low Health Risk
+77,False,Routine,High Risk Lesion,Moderate,67.44164519385421,Moderate Health Risk
+78,False,Routine,Moderate Anomaly Detected,Moderate,86.69446390680382,Low Health Risk
+79,False,Routine,Low Risk,High,100.0,Low Health Risk
+80,False,Urgent,Moderate Anomaly Detected,Moderate,64.23185411141283,Moderate Health Risk
+81,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+82,False,Routine,Low Risk,High,100.0,Low Health Risk
+83,True,Emergency,Low Risk,Moderate,59.86636533051088,High Health Risk
+84,False,Routine,Low Risk,High,99.8431150721309,Low Health Risk
+85,False,Routine,Low Risk,High,99.92458157622518,Low Health Risk
+86,False,Routine,Low Risk,Low,91.96203236256933,Low Health Risk
+87,True,Emergency,Low Risk,Low,51.67779883348463,High Health Risk
+88,True,Emergency,Low Risk,Moderate,68.18206929719717,Moderate Health Risk
+89,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+90,True,Emergency,Low Risk,Moderate,58.15620021660615,High Health Risk
+91,True,Emergency,Low Risk,High,63.66819794621834,Moderate Health Risk
+92,False,Urgent,Low Risk,High,83.82598755950937,Moderate Health Risk
+93,False,Routine,Moderate Anomaly Detected,High,79.78340155851623,Moderate Health Risk
+94,True,Emergency,Low Risk,High,58.285681395387414,High Health Risk
+95,False,Routine,Moderate Anomaly Detected,Moderate,86.58813539354638,Low Health Risk
+96,False,Routine,Low Risk,High,98.45934729895681,Low Health Risk
+97,False,Routine,Low Risk,High,98.2072941472897,Low Health Risk
+98,False,Routine,Low Risk,High,98.35147244497063,Low Health Risk
+99,True,Emergency,Low Risk,High,66.48509257884638,Moderate Health Risk
+100,False,Routine,High Risk Lesion,Low,62.46185323541855,Moderate Health Risk
+101,True,Urgent,Low Risk,Moderate,84.61564090161559,Moderate Health Risk
+102,False,Routine,Low Risk,High,99.80779440519616,Low Health Risk
+103,False,Routine,Low Risk,High,99.42144980727359,Low Health Risk
+104,False,Routine,Low Risk,Low,90.8116715942183,Low Health Risk
+105,False,Urgent,Low Risk,Moderate,75.72072740668571,Moderate Health Risk
+106,False,Routine,Low Risk,High,99.97592594852345,Low Health Risk
+107,False,Routine,Moderate Anomaly Detected,High,87.21630855751454,Low Health Risk
+108,True,Emergency,Low Risk,Moderate,62.382091089087204,Moderate Health Risk
+109,False,Routine,Low Risk,Low,94.4791043402266,Low Health Risk
+110,True,Emergency,Low Risk,High,59.51440707801847,High Health Risk
+111,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+112,False,Routine,High Risk Lesion,Moderate,71.30302169551835,Moderate Health Risk
+113,True,Emergency,Low Risk,Moderate,62.23400599723616,Moderate Health Risk
+114,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+115,False,Routine,Low Risk,Moderate,99.80975806453077,Low Health Risk
+116,True,Emergency,Low Risk,High,57.40291307732636,High Health Risk
+117,False,Routine,High Risk Lesion,High,69.19515743504434,Moderate Health Risk
+118,False,Routine,Low Risk,High,100.0,Low Health Risk
+119,False,Routine,Low Risk,High,98.2628345577134,Low Health Risk
+120,False,Routine,Low Risk,High,100.0,Low Health Risk
+121,True,Urgent,Low Risk,Low,69.61787913476073,Moderate Health Risk
+122,True,Urgent,Low Risk,High,83.0609005194896,Moderate Health Risk
+123,False,Routine,Low Risk,High,98.39776557103738,Low Health Risk
+124,False,Urgent,High Risk Lesion,Moderate,53.82121867391484,High Health Risk
+125,True,Urgent,Low Risk,High,78.85528259267306,Moderate Health Risk
+126,False,Routine,Moderate Anomaly Detected,High,90.9803369180557,Low Health Risk
+127,False,Emergency,Low Risk,Moderate,56.760570081861125,High Health Risk
+128,False,Routine,Low Risk,Moderate,99.07470943753978,Low Health Risk
+129,False,Routine,Low Risk,High,98.52910484450132,Low Health Risk
+130,False,Routine,High Risk Lesion,High,68.33105612760629,Moderate Health Risk
+131,False,Routine,Low Risk,Moderate,99.05473521053847,Low Health Risk
+132,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+133,False,Emergency,Low Risk,High,65.59578403212599,Moderate Health Risk
+134,False,Routine,Low Risk,High,99.1884868624927,Low Health Risk
+135,False,Routine,Low Risk,Low,93.8098150036718,Low Health Risk
+136,True,Emergency,Low Risk,High,56.86270995634776,High Health Risk
+137,True,Emergency,Low Risk,Moderate,67.1720602207715,Moderate Health Risk
+138,True,Urgent,Low Risk,High,74.37413876905342,Moderate Health Risk
+139,False,Routine,High Risk Lesion,High,69.64664952881279,Moderate Health Risk
+140,False,Routine,Low Risk,Low,95.4216908249066,Low Health Risk
+141,True,Emergency,Low Risk,High,69.11625600403616,Moderate Health Risk
+142,True,Emergency,Low Risk,Low,52.05191855236038,High Health Risk
+143,True,Emergency,Low Risk,High,61.81015165746914,Moderate Health Risk
+144,False,Routine,Moderate Anomaly Detected,High,85.28499722857465,Low Health Risk
+145,False,Routine,High Risk Lesion,High,72.68112646391168,Moderate Health Risk
+146,False,Routine,Moderate Anomaly Detected,High,85.71126564983439,Low Health Risk
+147,False,Routine,Low Risk,High,100.0,Low Health Risk
+148,True,Urgent,Low Risk,High,82.65056384257004,Moderate Health Risk
+149,False,Emergency,Low Risk,High,57.0660907742565,High Health Risk
+150,False,Routine,Low Risk,Low,96.12950477408752,Low Health Risk
+151,False,Routine,Moderate Anomaly Detected,High,89.06690887448687,Low Health Risk
+152,True,Emergency,Low Risk,High,58.45422085832947,High Health Risk
+153,False,Emergency,Low Risk,High,56.39198077216942,High Health Risk
+154,False,Routine,Low Risk,High,100.0,Low Health Risk
+155,False,Routine,Moderate Anomaly Detected,High,88.43584429957725,Low Health Risk
+156,False,Routine,Low Risk,High,99.98350294031508,Low Health Risk
+157,True,Urgent,High Risk Lesion,Moderate,47.63620198196754,High Health Risk
+158,False,Urgent,Low Risk,High,77.65954712256442,Moderate Health Risk
+159,False,Urgent,Low Risk,High,84.73762201387251,Moderate Health Risk
+160,True,Emergency,Low Risk,Moderate,67.4074274049349,Moderate Health Risk
+161,False,Routine,Moderate Anomaly Detected,High,86.40506425199902,Low Health Risk
+162,False,Routine,Low Risk,High,100.0,Low Health Risk
+163,True,Emergency,Moderate Anomaly Detected,High,50.92577973562029,High Health Risk
+164,True,Urgent,Moderate Anomaly Detected,High,66.20312689977762,Moderate Health Risk
+165,True,Emergency,Low Risk,Moderate,60.618511153194305,Moderate Health Risk
+166,True,Emergency,Moderate Anomaly Detected,High,52.56369074216296,High Health Risk
+167,False,Routine,Moderate Anomaly Detected,High,82.69181947334249,Moderate Health Risk
+168,False,Routine,Low Risk,Low,89.96082966686649,Low Health Risk
+169,False,Routine,Low Risk,High,100.0,Low Health Risk
+170,False,Urgent,Low Risk,Moderate,82.14067464474331,Moderate Health Risk
+171,True,Emergency,Low Risk,High,70.91926292428131,Moderate Health Risk
+172,False,Routine,Moderate Anomaly Detected,Moderate,87.32766127918626,Low Health Risk
+173,False,Routine,Low Risk,High,99.3037018558083,Low Health Risk
+174,False,Routine,Low Risk,High,99.56997422562674,Low Health Risk
+175,False,Emergency,Moderate Anomaly Detected,Moderate,40.136513680371415,High Health Risk
+176,True,Emergency,Low Risk,High,59.7016201757861,High Health Risk
+177,True,Urgent,Moderate Anomaly Detected,High,62.46522483062628,Moderate Health Risk
+178,False,Routine,Low Risk,Moderate,98.4182713613376,Low Health Risk
+179,False,Routine,Low Risk,High,99.19534354534926,Low Health Risk
+180,False,Routine,Low Risk,Moderate,98.3204593855387,Low Health Risk
+181,False,Routine,Low Risk,Moderate,98.65599792395798,Low Health Risk
+182,False,Urgent,Low Risk,High,84.71132114969608,Moderate Health Risk
+183,False,Routine,Low Risk,High,98.08344455716615,Low Health Risk
+184,False,Routine,Low Risk,Low,89.88765242376024,Low Health Risk
+185,True,Emergency,High Risk Lesion,High,26.96007363231782,High Health Risk
+186,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+187,False,Emergency,Low Risk,Moderate,65.17878618953526,Moderate Health Risk
+188,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+189,True,Urgent,Low Risk,High,79.01791968204594,Moderate Health Risk
+190,False,Routine,Low Risk,High,99.56432614660704,Low Health Risk
+191,False,Routine,Low Risk,High,99.58663910537425,Low Health Risk
+192,False,Routine,Low Risk,High,99.34801270572514,Low Health Risk
+193,False,Routine,High Risk Lesion,High,70.92492688052724,Moderate Health Risk
+194,False,Routine,Moderate Anomaly Detected,High,85.61954147808551,Low Health Risk
+195,False,Routine,Low Risk,Low,95.30152768114002,Low Health Risk
+196,False,Routine,Low Risk,High,98.59337280384835,Low Health Risk
+197,False,Emergency,Low Risk,High,60.315214874157945,Moderate Health Risk
+198,False,Routine,Low Risk,High,100.0,Low Health Risk
+199,False,Routine,Moderate Anomaly Detected,High,89.5077743979333,Low Health Risk
+200,False,Routine,Low Risk,Low,93.3863837369088,Low Health Risk
+201,False,Routine,High Risk Lesion,Moderate,66.89860197146686,Moderate Health Risk
+202,False,Routine,High Risk Lesion,Moderate,64.85589000067831,Moderate Health Risk
+203,False,Routine,Low Risk,High,100.0,Low Health Risk
+204,False,Routine,Moderate Anomaly Detected,Moderate,80.30249405973223,Moderate Health Risk
+205,False,Routine,Low Risk,Moderate,99.52167881693119,Low Health Risk
+206,False,Routine,Low Risk,High,100.0,Low Health Risk
+207,False,Emergency,Low Risk,High,58.94943564321727,High Health Risk
+208,False,Routine,Low Risk,High,100.0,Low Health Risk
+209,False,Routine,Low Risk,Moderate,99.72344836615213,Low Health Risk
+210,False,Routine,High Risk Lesion,High,65.06213048090339,Moderate Health Risk
+211,True,Emergency,Low Risk,High,62.33982501296558,Moderate Health Risk
+212,True,Urgent,Low Risk,High,83.91297792051313,Moderate Health Risk
+213,True,Urgent,Moderate Anomaly Detected,High,59.92535670667324,High Health Risk
+214,False,Routine,High Risk Lesion,Moderate,68.34493725912573,Moderate Health Risk
+215,False,Urgent,Low Risk,High,77.52710122923008,Moderate Health Risk
+216,False,Routine,Low Risk,Moderate,98.38214125533867,Low Health Risk
+217,False,Urgent,Low Risk,High,80.41251275103882,Moderate Health Risk
+218,True,Urgent,Low Risk,Moderate,81.46884538168955,Moderate Health Risk
+219,False,Routine,Low Risk,High,99.78316365830892,Low Health Risk
+220,False,Routine,Low Risk,High,100.0,Low Health Risk
+221,False,Routine,Low Risk,Moderate,99.4678243168192,Low Health Risk
+222,False,Routine,Low Risk,High,98.93484832764173,Low Health Risk
+223,False,Routine,Low Risk,Moderate,98.76129945127627,Low Health Risk
+224,True,Emergency,Moderate Anomaly Detected,High,55.30539784023064,High Health Risk
+225,True,Emergency,Low Risk,High,55.67785006052134,High Health Risk
+226,False,Routine,Low Risk,Low,96.20785394198141,Low Health Risk
+227,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+228,False,Routine,Moderate Anomaly Detected,Moderate,86.02116672019008,Low Health Risk
+229,False,Routine,Low Risk,High,99.11881415388592,Low Health Risk
+230,False,Emergency,Low Risk,Low,52.908453920612544,High Health Risk
+231,True,Emergency,Low Risk,Moderate,66.72875922447636,Moderate Health Risk
+232,False,Routine,Low Risk,High,100.0,Low Health Risk
+233,False,Routine,Low Risk,High,98.55679209847013,Low Health Risk
+234,False,Routine,Low Risk,High,99.47013768916612,Low Health Risk
+235,True,Emergency,Low Risk,High,68.54663722038117,Moderate Health Risk
+236,False,Routine,Low Risk,High,100.0,Low Health Risk
+237,False,Routine,Low Risk,High,99.93840634807546,Low Health Risk
+238,False,Routine,Low Risk,Low,93.60617589315824,Low Health Risk
+239,True,Urgent,Low Risk,Moderate,81.48698408479278,Moderate Health Risk
+240,False,Routine,Moderate Anomaly Detected,High,87.52481228530151,Low Health Risk
+241,False,Routine,High Risk Lesion,High,73.33628512370085,Moderate Health Risk
+242,False,Routine,Low Risk,High,98.04848309857557,Low Health Risk
+243,False,Routine,Low Risk,High,99.06340454661725,Low Health Risk
+244,False,Routine,Low Risk,High,99.29870370756024,Low Health Risk
+245,False,Routine,Moderate Anomaly Detected,Moderate,78.9703581102229,Moderate Health Risk
+246,True,Urgent,Low Risk,Moderate,74.74498960159008,Moderate Health Risk
+247,False,Routine,Low Risk,High,98.90785877746146,Low Health Risk
+248,False,Routine,Moderate Anomaly Detected,High,81.36441381032601,Moderate Health Risk
+249,True,Routine,Low Risk,Moderate,100.0,Low Health Risk
+250,False,Routine,Moderate Anomaly Detected,High,86.84448166266165,Low Health Risk
+251,True,Urgent,Low Risk,High,81.44902743028983,Moderate Health Risk
+252,False,Routine,Low Risk,High,100.0,Low Health Risk
+253,False,Routine,Moderate Anomaly Detected,High,88.64500873529659,Low Health Risk
+254,True,Emergency,Moderate Anomaly Detected,Moderate,56.40822330586621,High Health Risk
+255,False,Routine,Low Risk,High,99.09516523005642,Low Health Risk
+256,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+257,False,Routine,Low Risk,High,100.0,Low Health Risk
+258,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+259,False,Routine,Low Risk,High,100.0,Low Health Risk
+260,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+261,False,Urgent,Low Risk,High,79.30538757328327,Moderate Health Risk
+262,False,Routine,High Risk Lesion,Moderate,72.18534071618376,Moderate Health Risk
+263,False,Routine,Low Risk,Moderate,99.50103961777066,Low Health Risk
+264,False,Routine,Low Risk,Moderate,98.80992224066095,Low Health Risk
+265,False,Routine,Moderate Anomaly Detected,Moderate,83.4783540927611,Moderate Health Risk
+266,False,Routine,Low Risk,Moderate,99.65048736339449,Low Health Risk
+267,False,Routine,Low Risk,High,99.60930849874623,Low Health Risk
+268,False,Routine,Low Risk,High,100.0,Low Health Risk
+269,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+270,True,Emergency,Moderate Anomaly Detected,Moderate,46.428784280646084,High Health Risk
+271,False,Routine,Low Risk,High,100.0,Low Health Risk
+272,False,Routine,Low Risk,High,98.47334476369355,Low Health Risk
+273,False,Routine,High Risk Lesion,Moderate,71.26308721092113,Moderate Health Risk
+274,True,Emergency,Low Risk,Moderate,67.28183337662978,Moderate Health Risk
+275,False,Routine,Low Risk,High,99.74072159702143,Low Health Risk
+276,False,Routine,Moderate Anomaly Detected,High,86.54952588845778,Low Health Risk
+277,False,Urgent,Low Risk,High,78.33300616375867,Moderate Health Risk
+278,False,Urgent,Low Risk,High,81.59233690601947,Moderate Health Risk
+279,False,Urgent,Low Risk,High,85.01379189639701,Low Health Risk
+280,False,Urgent,Low Risk,High,85.43692477694746,Low Health Risk
+281,False,Routine,Moderate Anomaly Detected,High,83.7336700604631,Moderate Health Risk
+282,False,Routine,Low Risk,High,100.0,Low Health Risk
+283,False,Routine,Moderate Anomaly Detected,High,89.84661397143252,Low Health Risk
+284,False,Routine,Moderate Anomaly Detected,Moderate,83.0958018970729,Moderate Health Risk
+285,True,Emergency,Low Risk,High,65.14889324317758,Moderate Health Risk
+286,False,Routine,Low Risk,High,100.0,Low Health Risk
+287,False,Routine,Low Risk,High,99.320860259486,Low Health Risk
+288,False,Routine,Low Risk,High,99.02197337862242,Low Health Risk
+289,False,Routine,Low Risk,Moderate,99.85572550724933,Low Health Risk
+290,False,Routine,Low Risk,Moderate,99.58952556194127,Low Health Risk
+291,True,Urgent,Low Risk,High,77.38182927318624,Moderate Health Risk
+292,False,Routine,Moderate Anomaly Detected,High,85.75525136451463,Low Health Risk
+293,True,Emergency,Low Risk,Moderate,59.16184496661025,High Health Risk
+294,False,Emergency,Moderate Anomaly Detected,High,46.929372405622495,High Health Risk
+295,False,Routine,Low Risk,Low,95.69793655673965,Low Health Risk
+296,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+297,False,Routine,Moderate Anomaly Detected,High,85.4330336446378,Low Health Risk
+298,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+299,False,Routine,Moderate Anomaly Detected,Moderate,86.16914683148453,Low Health Risk
+300,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+301,False,Routine,Low Risk,Moderate,99.30041606172679,Low Health Risk
+302,False,Emergency,Low Risk,High,67.2182489736556,Moderate Health Risk
+303,False,Routine,Low Risk,High,99.21578560496289,Low Health Risk
+304,False,Routine,Moderate Anomaly Detected,High,81.61460030843251,Moderate Health Risk
+305,False,Routine,Low Risk,High,100.0,Low Health Risk
+306,False,Routine,Low Risk,Moderate,99.68577616631698,Low Health Risk
+307,True,Emergency,Low Risk,Moderate,59.91019855341399,High Health Risk
+308,True,Emergency,Low Risk,High,60.27303224324445,Moderate Health Risk
+309,False,Routine,Low Risk,High,99.87507186185802,Low Health Risk
+310,False,Routine,Moderate Anomaly Detected,High,90.86404511615713,Low Health Risk
+311,False,Routine,Low Risk,Moderate,98.95804067963815,Low Health Risk
+312,False,Routine,Moderate Anomaly Detected,High,82.42097829795692,Moderate Health Risk
+313,False,Routine,High Risk Lesion,High,68.2230476079615,Moderate Health Risk
+314,False,Routine,High Risk Lesion,High,72.98802505098924,Moderate Health Risk
+315,True,Emergency,Low Risk,Moderate,66.48795308456106,Moderate Health Risk
+316,True,Urgent,Low Risk,Low,69.42766289091965,Moderate Health Risk
+317,False,Routine,Low Risk,High,98.56009639021327,Low Health Risk
+318,False,Routine,Low Risk,High,99.78987256528983,Low Health Risk
+319,False,Routine,Low Risk,High,98.14688545000328,Low Health Risk
+320,True,Emergency,Low Risk,High,68.44547170856413,Moderate Health Risk
+321,False,Routine,Low Risk,High,100.0,Low Health Risk
+322,False,Routine,High Risk Lesion,High,72.02071770597848,Moderate Health Risk
+323,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+324,False,Routine,Moderate Anomaly Detected,High,91.0808035337061,Low Health Risk
+325,False,Routine,Low Risk,High,99.6757911607499,Low Health Risk
+326,False,Routine,Moderate Anomaly Detected,High,84.1248386104478,Moderate Health Risk
+327,False,Routine,High Risk Lesion,Moderate,67.15890628720092,Moderate Health Risk
+328,True,Emergency,High Risk Lesion,Moderate,29.04724968718798,High Health Risk
+329,True,Emergency,Low Risk,High,59.67156428112604,High Health Risk
+330,False,Routine,Low Risk,High,100.0,Low Health Risk
+331,False,Urgent,Moderate Anomaly Detected,Moderate,67.8302745980321,Moderate Health Risk
+332,False,Routine,Low Risk,High,98.66251338811306,Low Health Risk
+333,False,Routine,Low Risk,High,100.0,Low Health Risk
+334,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+335,False,Routine,Low Risk,High,100.0,Low Health Risk
+336,False,Routine,Low Risk,Low,94.39716808519076,Low Health Risk
+337,True,Urgent,Low Risk,High,76.12678558127796,Moderate Health Risk
+338,False,Emergency,Moderate Anomaly Detected,Moderate,45.62049115825256,High Health Risk
+339,False,Routine,Low Risk,High,100.0,Low Health Risk
+340,False,Routine,Moderate Anomaly Detected,Moderate,85.63508562487743,Low Health Risk
+341,False,Routine,Low Risk,High,99.7761749968088,Low Health Risk
+342,False,Routine,Moderate Anomaly Detected,Moderate,87.91185439220718,Low Health Risk
+343,False,Routine,Low Risk,High,98.91099894441284,Low Health Risk
+344,False,Routine,Low Risk,High,100.0,Low Health Risk
+345,False,Urgent,Moderate Anomaly Detected,High,70.80923376794564,Moderate Health Risk
+346,False,Routine,Low Risk,High,100.0,Low Health Risk
+347,False,Urgent,Moderate Anomaly Detected,High,66.41411682000071,Moderate Health Risk
+348,False,Urgent,Low Risk,High,81.99637725049075,Moderate Health Risk
+349,False,Emergency,Low Risk,High,67.6249367235655,Moderate Health Risk
+350,False,Routine,Low Risk,Moderate,99.19758235348672,Low Health Risk
+351,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+352,False,Routine,Low Risk,High,100.0,Low Health Risk
+353,False,Routine,Moderate Anomaly Detected,Low,71.07320240011205,Moderate Health Risk
+354,False,Routine,Low Risk,High,99.39528213587792,Low Health Risk
+355,True,Urgent,Low Risk,Moderate,77.03755205356919,Moderate Health Risk
+356,True,Urgent,Low Risk,Moderate,80.1524291498654,Moderate Health Risk
+357,False,Routine,Low Risk,High,98.08810768489526,Low Health Risk
+358,False,Routine,High Risk Lesion,Moderate,72.01312894282663,Moderate Health Risk
+359,True,Emergency,Low Risk,Moderate,62.22850312779718,Moderate Health Risk
+360,False,Routine,Moderate Anomaly Detected,Moderate,83.36980492225013,Moderate Health Risk
+361,False,Routine,Moderate Anomaly Detected,High,81.86897266247318,Moderate Health Risk
+362,False,Routine,Low Risk,High,100.0,Low Health Risk
+363,True,Urgent,High Risk Lesion,High,40.94369937822454,High Health Risk
+364,False,Routine,Moderate Anomaly Detected,Moderate,80.40984077730886,Moderate Health Risk
+365,False,Urgent,Low Risk,High,77.26090396179916,Moderate Health Risk
+366,True,Emergency,High Risk Lesion,Moderate,22.90521320323963,High Health Risk
+367,True,Emergency,Low Risk,Low,54.797968299397354,High Health Risk
+368,True,Urgent,Moderate Anomaly Detected,High,66.19994661303386,Moderate Health Risk
+369,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+370,False,Emergency,Moderate Anomaly Detected,High,52.26769832326344,High Health Risk
+371,False,Routine,Low Risk,High,100.0,Low Health Risk
+372,False,Routine,High Risk Lesion,High,69.70155415245063,Moderate Health Risk
+373,True,Routine,Low Risk,High,99.85638063781401,Low Health Risk
+374,False,Routine,Low Risk,Moderate,98.87922139529276,Low Health Risk
+375,True,Emergency,Moderate Anomaly Detected,High,53.61127268707182,High Health Risk
+376,False,Routine,Low Risk,High,100.0,Low Health Risk
+377,False,Urgent,Low Risk,Moderate,78.28952036129766,Moderate Health Risk
+378,False,Urgent,Moderate Anomaly Detected,Moderate,62.471939083785,Moderate Health Risk
+379,False,Emergency,Moderate Anomaly Detected,Low,36.28977929542573,High Health Risk
+380,False,Routine,Moderate Anomaly Detected,Moderate,89.16424004565826,Low Health Risk
+381,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+382,False,Routine,Low Risk,High,100.0,Low Health Risk
+383,False,Routine,High Risk Lesion,High,72.58348134348994,Moderate Health Risk
+384,False,Routine,Moderate Anomaly Detected,Low,81.14742878165349,Moderate Health Risk
+385,False,Emergency,Moderate Anomaly Detected,High,38.53291619427042,High Health Risk
+386,False,Emergency,Moderate Anomaly Detected,Low,42.05074978791958,High Health Risk
+387,True,Emergency,Moderate Anomaly Detected,High,47.27209628618478,High Health Risk
+388,False,Routine,Low Risk,High,98.98936126327634,Low Health Risk
+389,False,Urgent,Moderate Anomaly Detected,Low,51.20111650756161,High Health Risk
+390,False,Routine,Low Risk,High,100.0,Low Health Risk
+391,True,Routine,Moderate Anomaly Detected,High,79.60139713214708,Moderate Health Risk
+392,False,Routine,Moderate Anomaly Detected,High,87.0924780310933,Low Health Risk
+393,False,Emergency,Low Risk,High,64.50051742027108,Moderate Health Risk
+394,False,Routine,High Risk Lesion,High,68.82383205450273,Moderate Health Risk
+395,True,Urgent,Low Risk,High,81.56283310003752,Moderate Health Risk
+396,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+397,False,Urgent,Moderate Anomaly Detected,Moderate,66.53156975497633,Moderate Health Risk
+398,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+399,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+400,False,Routine,Low Risk,High,100.0,Low Health Risk
+401,False,Routine,Low Risk,High,98.21853768000389,Low Health Risk
+402,False,Urgent,Low Risk,High,83.24546540211092,Moderate Health Risk
+403,False,Routine,Moderate Anomaly Detected,Moderate,86.27187147968783,Low Health Risk
+404,False,Emergency,Low Risk,High,62.79568620953051,Moderate Health Risk
+405,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+406,True,Emergency,Low Risk,High,66.37118068458834,Moderate Health Risk
+407,False,Routine,Low Risk,High,99.47712308086217,Low Health Risk
+408,False,Routine,Low Risk,High,98.48812197728739,Low Health Risk
+409,True,Urgent,Moderate Anomaly Detected,High,70.10457780840925,Moderate Health Risk
+410,False,Routine,Low Risk,Moderate,99.24793608130567,Low Health Risk
+411,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+412,True,Emergency,Low Risk,Moderate,63.30845452792048,Moderate Health Risk
+413,False,Urgent,Moderate Anomaly Detected,High,65.41823736615946,Moderate Health Risk
+414,False,Routine,Low Risk,Moderate,99.26619866107148,Low Health Risk
+415,False,Routine,Low Risk,High,100.0,Low Health Risk
+416,False,Routine,Low Risk,High,99.56272844394375,Low Health Risk
+417,True,Emergency,Moderate Anomaly Detected,High,50.28013686888036,High Health Risk
+418,False,Routine,Low Risk,High,100.0,Low Health Risk
+419,False,Routine,Low Risk,High,98.40549159021263,Low Health Risk
+420,False,Routine,Low Risk,Low,88.52696428437443,Low Health Risk
+421,False,Routine,Moderate Anomaly Detected,Moderate,86.1252078346843,Low Health Risk
+422,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+423,True,Urgent,High Risk Lesion,High,53.583479380832486,High Health Risk
+424,False,Routine,Low Risk,Moderate,99.80274589975565,Low Health Risk
+425,False,Urgent,Low Risk,High,73.95628592838108,Moderate Health Risk
+426,True,Emergency,Low Risk,Low,51.95611022945459,High Health Risk
+427,False,Emergency,Low Risk,High,65.37367666202118,Moderate Health Risk
+428,True,Emergency,Low Risk,High,69.60415515293442,Moderate Health Risk
+429,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+430,False,Routine,Moderate Anomaly Detected,High,89.51717682194993,Low Health Risk
+431,False,Routine,Low Risk,High,100.0,Low Health Risk
+432,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+433,False,Routine,Low Risk,High,99.58979262759637,Low Health Risk
+434,False,Routine,Low Risk,High,100.0,Low Health Risk
+435,False,Urgent,High Risk Lesion,Moderate,51.421545267877455,High Health Risk
+436,False,Routine,Low Risk,High,100.0,Low Health Risk
+437,True,Urgent,Low Risk,Moderate,78.7282048404097,Moderate Health Risk
+438,False,Routine,Moderate Anomaly Detected,High,82.48920924669754,Moderate Health Risk
+439,True,Emergency,Low Risk,High,58.52865195563051,High Health Risk
+440,True,Emergency,Low Risk,Low,55.770655327975646,High Health Risk
+441,False,Routine,High Risk Lesion,Low,65.69206299509435,Moderate Health Risk
+442,False,Routine,Moderate Anomaly Detected,High,85.96194857448039,Low Health Risk
+443,False,Routine,Low Risk,Moderate,98.64146162447898,Low Health Risk
+444,False,Routine,Low Risk,High,100.0,Low Health Risk
+445,False,Routine,Low Risk,High,98.07651586574914,Low Health Risk
+446,True,Emergency,Low Risk,High,67.07135173412146,Moderate Health Risk
+447,False,Routine,Low Risk,High,100.0,Low Health Risk
+448,False,Routine,Moderate Anomaly Detected,Moderate,86.89573111880804,Low Health Risk
+449,False,Routine,Low Risk,Moderate,98.46157856871567,Low Health Risk
+450,False,Routine,Low Risk,High,99.5674374927521,Low Health Risk
+451,False,Routine,Moderate Anomaly Detected,Low,72.69315500692262,Moderate Health Risk
+452,False,Routine,Low Risk,High,100.0,Low Health Risk
+453,False,Routine,Low Risk,High,100.0,Low Health Risk
+454,False,Routine,Low Risk,Moderate,99.55130435966772,Low Health Risk
+455,False,Routine,Low Risk,High,98.72689317291263,Low Health Risk
+456,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+457,False,Routine,Low Risk,High,99.4901330950382,Low Health Risk
+458,True,Emergency,Low Risk,High,55.577580114790905,High Health Risk
+459,False,Routine,Low Risk,Moderate,98.19463065464686,Low Health Risk
+460,False,Routine,Moderate Anomaly Detected,Moderate,83.38121740872782,Moderate Health Risk
+461,False,Urgent,Low Risk,High,79.13313597028059,Moderate Health Risk
+462,False,Routine,Moderate Anomaly Detected,Moderate,81.6449451322177,Moderate Health Risk
+463,False,Routine,Low Risk,High,98.85965054814558,Low Health Risk
+464,False,Routine,Low Risk,Moderate,98.53460232564207,Low Health Risk
+465,False,Routine,Low Risk,Moderate,99.05624793877487,Low Health Risk
+466,False,Routine,Moderate Anomaly Detected,High,87.83426083768946,Low Health Risk
+467,False,Routine,Moderate Anomaly Detected,Moderate,86.47631573101556,Low Health Risk
+468,False,Routine,Low Risk,High,99.66096388933616,Low Health Risk
+469,False,Routine,Low Risk,High,100.0,Low Health Risk
+470,False,Routine,Low Risk,High,100.0,Low Health Risk
+471,False,Routine,High Risk Lesion,High,68.74482109161879,Moderate Health Risk
+472,False,Routine,Low Risk,High,100.0,Low Health Risk
+473,False,Routine,Low Risk,High,98.92807272123524,Low Health Risk
+474,True,Urgent,Low Risk,Moderate,77.90502746446668,Moderate Health Risk
+475,False,Emergency,Low Risk,High,58.41822271577602,High Health Risk
+476,False,Routine,Moderate Anomaly Detected,High,86.7592487982784,Low Health Risk
+477,False,Routine,Low Risk,Low,91.79713206973938,Low Health Risk
+478,True,Urgent,Moderate Anomaly Detected,High,57.65065608983018,High Health Risk
+479,False,Routine,Low Risk,High,100.0,Low Health Risk
+480,True,Emergency,Low Risk,High,69.83250775806039,Moderate Health Risk
+481,True,Emergency,Moderate Anomaly Detected,Moderate,46.68356629018209,High Health Risk
+482,True,Emergency,Low Risk,Moderate,68.95270450326866,Moderate Health Risk
+483,False,Urgent,Low Risk,High,76.80703347534171,Moderate Health Risk
+484,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+485,True,Emergency,Low Risk,Moderate,64.41440895938908,Moderate Health Risk
+486,True,Emergency,Low Risk,High,55.84580930524271,High Health Risk
+487,False,Routine,Low Risk,High,99.07424866981457,Low Health Risk
+488,True,Urgent,High Risk Lesion,High,57.390909090728194,High Health Risk
+489,False,Routine,Moderate Anomaly Detected,High,85.67294925086436,Low Health Risk
+490,False,Urgent,Low Risk,High,81.78169423103833,Moderate Health Risk
+491,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+492,False,Routine,Low Risk,High,99.83833622885449,Low Health Risk
+493,False,Routine,Low Risk,High,99.38824947399758,Low Health Risk
+494,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+495,False,Routine,Low Risk,High,100.0,Low Health Risk
+496,False,Routine,Moderate Anomaly Detected,High,86.5336285880154,Low Health Risk
+497,False,Routine,Moderate Anomaly Detected,Moderate,82.68919012073691,Moderate Health Risk
+498,False,Routine,Low Risk,High,98.5648941734926,Low Health Risk
+499,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+500,False,Routine,Low Risk,High,100.0,Low Health Risk
+501,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+502,True,Urgent,Low Risk,Moderate,86.47614222888907,Low Health Risk
+503,False,Routine,Low Risk,High,98.79802125971844,Low Health Risk
+504,False,Routine,Low Risk,High,98.95258661466279,Low Health Risk
+505,False,Routine,Moderate Anomaly Detected,Moderate,82.44744554227434,Moderate Health Risk
+506,False,Routine,Moderate Anomaly Detected,High,88.5131566267675,Low Health Risk
+507,False,Routine,Low Risk,Moderate,98.49360326082238,Low Health Risk
+508,False,Routine,Moderate Anomaly Detected,High,89.54643845055001,Low Health Risk
+509,False,Routine,High Risk Lesion,Moderate,66.5588237627152,Moderate Health Risk
+510,False,Routine,Low Risk,Moderate,98.94773329962659,Low Health Risk
+511,False,Routine,Low Risk,Low,90.97731959048397,Low Health Risk
+512,True,Emergency,Low Risk,High,61.71480175052503,Moderate Health Risk
+513,False,Routine,Low Risk,High,100.0,Low Health Risk
+514,False,Routine,High Risk Lesion,High,68.66448491779961,Moderate Health Risk
+515,False,Routine,Low Risk,High,100.0,Low Health Risk
+516,True,Emergency,High Risk Lesion,Low,35.014369858176735,High Health Risk
+517,False,Routine,Low Risk,High,99.88384100973893,Low Health Risk
+518,False,Routine,Low Risk,High,98.45918770900512,Low Health Risk
+519,False,Routine,Low Risk,High,99.60962503719725,Low Health Risk
+520,False,Routine,Low Risk,High,99.7602321860376,Low Health Risk
+521,False,Routine,Moderate Anomaly Detected,High,82.77656118280828,Moderate Health Risk
+522,False,Routine,Moderate Anomaly Detected,High,83.72443056867236,Moderate Health Risk
+523,False,Urgent,Low Risk,Moderate,77.05661086263044,Moderate Health Risk
+524,False,Routine,High Risk Lesion,High,73.58057558840521,Moderate Health Risk
+525,True,Urgent,High Risk Lesion,High,54.33465111260742,High Health Risk
+526,True,Emergency,Moderate Anomaly Detected,High,42.15000746731787,High Health Risk
+527,False,Routine,Low Risk,Low,92.95931339659164,Low Health Risk
+528,False,Routine,Low Risk,Low,93.14716156198207,Low Health Risk
+529,False,Routine,Low Risk,High,99.31271793119045,Low Health Risk
+530,False,Routine,High Risk Lesion,High,71.73167162704252,Moderate Health Risk
+531,False,Urgent,Low Risk,High,85.54856003459007,Low Health Risk
+532,False,Routine,Low Risk,Low,92.20615535678384,Low Health Risk
+533,False,Routine,Low Risk,High,100.0,Low Health Risk
+534,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+535,True,Urgent,Low Risk,High,81.10371323396534,Moderate Health Risk
+536,False,Routine,Low Risk,High,98.11662074408835,Low Health Risk
+537,False,Routine,Moderate Anomaly Detected,High,87.69590278489703,Low Health Risk
+538,False,Routine,Low Risk,Moderate,99.51846705780667,Low Health Risk
+539,False,Routine,Low Risk,High,99.59291117583204,Low Health Risk
+540,False,Routine,Low Risk,Moderate,99.72520682536405,Low Health Risk
+541,False,Routine,Low Risk,High,99.09753842081035,Low Health Risk
+542,False,Routine,Low Risk,High,100.0,Low Health Risk
+543,False,Routine,Moderate Anomaly Detected,High,84.12388317386275,Moderate Health Risk
+544,False,Routine,Low Risk,Low,92.45465232003988,Low Health Risk
+545,True,Emergency,Moderate Anomaly Detected,High,44.4823086505539,High Health Risk
+546,True,Urgent,Moderate Anomaly Detected,Moderate,68.1328752097076,Moderate Health Risk
+547,False,Routine,Low Risk,High,100.0,Low Health Risk
+548,False,Routine,High Risk Lesion,Moderate,72.65134261208053,Moderate Health Risk
+549,False,Routine,High Risk Lesion,Moderate,70.85442831439305,Moderate Health Risk
+550,False,Routine,Low Risk,Low,90.53877368700097,Low Health Risk
+551,False,Routine,Low Risk,High,98.65334659235623,Low Health Risk
+552,False,Routine,High Risk Lesion,Moderate,69.84923072159467,Moderate Health Risk
+553,False,Urgent,Low Risk,High,78.319247595344,Moderate Health Risk
+554,False,Routine,Low Risk,High,100.0,Low Health Risk
+555,True,Urgent,Low Risk,High,84.59647664108788,Moderate Health Risk
+556,False,Routine,Low Risk,High,100.0,Low Health Risk
+557,False,Urgent,Low Risk,High,75.65922527336866,Moderate Health Risk
+558,False,Routine,Moderate Anomaly Detected,High,82.36986751563575,Moderate Health Risk
+559,True,Urgent,Low Risk,High,82.52865344075111,Moderate Health Risk
+560,False,Routine,Low Risk,High,99.70994581636107,Low Health Risk
+561,False,Routine,Low Risk,Moderate,99.1157523042939,Low Health Risk
+562,True,Routine,Moderate Anomaly Detected,High,83.06871722532594,Moderate Health Risk
+563,False,Routine,Low Risk,Moderate,98.24402857202158,Low Health Risk
+564,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+565,False,Routine,Low Risk,High,98.90508972001274,Low Health Risk
+566,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+567,False,Routine,Moderate Anomaly Detected,High,86.93015450018704,Low Health Risk
+568,False,Routine,Moderate Anomaly Detected,Moderate,86.2826871379602,Low Health Risk
+569,False,Emergency,Low Risk,High,70.80528567938792,Moderate Health Risk
+570,False,Routine,Low Risk,High,98.50994272056099,Low Health Risk
+571,False,Routine,Moderate Anomaly Detected,High,85.53662806846175,Low Health Risk
+572,False,Routine,Low Risk,Moderate,99.01454222205615,Low Health Risk
+573,False,Routine,Low Risk,High,98.16987963702613,Low Health Risk
+574,False,Routine,Low Risk,High,98.37767559064193,Low Health Risk
+575,False,Routine,Moderate Anomaly Detected,High,86.31261571254332,Low Health Risk
+576,False,Routine,Low Risk,High,100.0,Low Health Risk
+577,False,Routine,Low Risk,Moderate,99.5361705535644,Low Health Risk
+578,False,Routine,Low Risk,High,98.386579337151,Low Health Risk
+579,True,Urgent,Low Risk,High,75.94207493530773,Moderate Health Risk
+580,False,Routine,Low Risk,High,99.26095773859781,Low Health Risk
+581,True,Emergency,Low Risk,Moderate,67.365230233888,Moderate Health Risk
+582,False,Routine,Low Risk,Moderate,99.13816554270774,Low Health Risk
+583,False,Routine,Low Risk,High,100.0,Low Health Risk
+584,False,Routine,Low Risk,High,98.42193370984414,Low Health Risk
+585,False,Urgent,Low Risk,High,78.85501551461176,Moderate Health Risk
+586,False,Routine,Moderate Anomaly Detected,Moderate,85.08958468003316,Low Health Risk
+587,False,Routine,Moderate Anomaly Detected,Low,77.03794323608894,Moderate Health Risk
+588,False,Emergency,Low Risk,Moderate,62.30077693675426,Moderate Health Risk
+589,False,Routine,Low Risk,Low,93.95457168283943,Low Health Risk
+590,False,Routine,Low Risk,High,99.9972117840573,Low Health Risk
+591,True,Emergency,Low Risk,High,63.32671281287908,Moderate Health Risk
+592,False,Urgent,Moderate Anomaly Detected,High,57.57241610729789,High Health Risk
+593,False,Routine,Moderate Anomaly Detected,High,89.07710536370588,Low Health Risk
+594,True,Emergency,Low Risk,High,57.22923053046314,High Health Risk
+595,False,Routine,Low Risk,High,98.59344134915807,Low Health Risk
+596,True,Emergency,Low Risk,High,70.54904327855664,Moderate Health Risk
+597,False,Routine,Low Risk,High,100.0,Low Health Risk
+598,False,Urgent,Low Risk,Low,70.29309414465584,Moderate Health Risk
+599,True,Routine,High Risk Lesion,High,64.6459104152465,Moderate Health Risk
+600,False,Routine,Low Risk,Low,92.12704486825844,Low Health Risk
+601,False,Routine,Low Risk,High,99.83732576320217,Low Health Risk
+602,False,Routine,Moderate Anomaly Detected,High,83.53240692145728,Moderate Health Risk
+603,False,Routine,Low Risk,Low,93.91676321447699,Low Health Risk
+604,False,Routine,Low Risk,High,98.7393535917881,Low Health Risk
+605,True,Emergency,Moderate Anomaly Detected,High,46.18894295419413,High Health Risk
+606,True,Emergency,Low Risk,High,62.25756543314479,Moderate Health Risk
+607,False,Routine,Low Risk,High,100.0,Low Health Risk
+608,False,Routine,High Risk Lesion,High,72.19618659847411,Moderate Health Risk
+609,True,Emergency,Low Risk,High,62.99208639457496,Moderate Health Risk
+610,False,Routine,Low Risk,High,99.43255886611658,Low Health Risk
+611,False,Routine,High Risk Lesion,High,72.8305539134828,Moderate Health Risk
+612,True,Emergency,Low Risk,High,68.98141075219652,Moderate Health Risk
+613,True,Emergency,Low Risk,Low,59.50466978032914,High Health Risk
+614,True,Emergency,Low Risk,Moderate,54.45442553627281,High Health Risk
+615,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+616,False,Routine,High Risk Lesion,High,66.34519114564462,Moderate Health Risk
+617,False,Routine,Low Risk,High,98.72490224419884,Low Health Risk
+618,False,Routine,Low Risk,High,100.0,Low Health Risk
+619,False,Routine,Low Risk,High,100.0,Low Health Risk
+620,False,Routine,Low Risk,High,100.0,Low Health Risk
+621,False,Routine,Low Risk,High,98.7952562437496,Low Health Risk
+622,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+623,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+624,True,Emergency,Low Risk,High,61.44712027560855,Moderate Health Risk
+625,True,Emergency,Low Risk,High,66.94424638580922,Moderate Health Risk
+626,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+627,False,Routine,Low Risk,High,99.26431073537306,Low Health Risk
+628,False,Routine,High Risk Lesion,Moderate,72.26733895449699,Moderate Health Risk
+629,True,Emergency,Low Risk,High,70.31551007252177,Moderate Health Risk
+630,True,Urgent,Low Risk,High,82.24433613431157,Moderate Health Risk
+631,True,Urgent,Low Risk,High,81.90181116764879,Moderate Health Risk
+632,False,Urgent,Low Risk,Moderate,75.91113566960706,Moderate Health Risk
+633,False,Routine,Low Risk,High,98.00371766747985,Low Health Risk
+634,False,Routine,Low Risk,High,100.0,Low Health Risk
+635,False,Routine,Low Risk,Low,94.12513335452097,Low Health Risk
+636,False,Routine,High Risk Lesion,Moderate,74.37966220107866,Moderate Health Risk
+637,False,Routine,Low Risk,Moderate,98.82632406488712,Low Health Risk
+638,False,Routine,Low Risk,High,100.0,Low Health Risk
+639,False,Routine,Moderate Anomaly Detected,High,83.98911279398044,Moderate Health Risk
+640,True,Urgent,Low Risk,High,83.06587907629391,Moderate Health Risk
+641,False,Routine,Moderate Anomaly Detected,Moderate,79.27184448299458,Moderate Health Risk
+642,False,Routine,Low Risk,High,98.47981176692387,Low Health Risk
+643,False,Routine,Low Risk,High,100.0,Low Health Risk
+644,False,Urgent,Low Risk,Low,76.12583735192591,Moderate Health Risk
+645,False,Urgent,Low Risk,Moderate,74.2761282223585,Moderate Health Risk
+646,True,Urgent,Low Risk,Moderate,77.84061456809356,Moderate Health Risk
+647,False,Urgent,High Risk Lesion,Low,44.450454576821194,High Health Risk
+648,True,Emergency,Low Risk,High,71.13771595310752,Moderate Health Risk
+649,False,Urgent,Low Risk,Moderate,85.58748036486979,Low Health Risk
+650,False,Routine,Low Risk,High,100.0,Low Health Risk
+651,True,Emergency,Low Risk,Moderate,69.8553842428332,Moderate Health Risk
+652,False,Routine,Low Risk,Moderate,99.64283698156666,Low Health Risk
+653,False,Routine,Low Risk,Moderate,99.02658882874438,Low Health Risk
+654,False,Routine,Low Risk,Moderate,99.03841313483392,Low Health Risk
+655,True,Urgent,Low Risk,High,86.65773576880756,Low Health Risk
+656,False,Urgent,Moderate Anomaly Detected,Moderate,66.27599192323629,Moderate Health Risk
+657,False,Routine,Low Risk,High,98.44241439549265,Low Health Risk
+658,True,Urgent,Moderate Anomaly Detected,High,67.75052792893983,Moderate Health Risk
+659,False,Urgent,Moderate Anomaly Detected,High,66.96336438122317,Moderate Health Risk
+660,False,Routine,Low Risk,High,100.0,Low Health Risk
+661,False,Routine,Low Risk,Moderate,99.613923876108,Low Health Risk
+662,False,Emergency,Low Risk,Low,50.19428102290206,High Health Risk
+663,True,Emergency,Low Risk,High,58.48262212104364,High Health Risk
+664,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+665,False,Routine,Low Risk,Moderate,98.49538410682327,Low Health Risk
+666,True,Urgent,Moderate Anomaly Detected,High,69.46749183099335,Moderate Health Risk
+667,True,Emergency,Low Risk,High,57.6148757824342,High Health Risk
+668,False,Urgent,Low Risk,Moderate,76.49297976676385,Moderate Health Risk
+669,False,Routine,Low Risk,High,100.0,Low Health Risk
+670,False,Routine,Low Risk,High,99.65406612115984,Low Health Risk
+671,True,Emergency,High Risk Lesion,High,24.440080495048434,High Health Risk
+672,False,Routine,High Risk Lesion,High,66.61801894225397,Moderate Health Risk
+673,False,Routine,Low Risk,High,100.0,Low Health Risk
+674,False,Routine,Low Risk,High,99.42383109388257,Low Health Risk
+675,True,Emergency,Low Risk,High,56.11491916058467,High Health Risk
+676,False,Routine,Low Risk,Moderate,98.81635064462304,Low Health Risk
+677,False,Routine,Low Risk,High,98.79738195788474,Low Health Risk
+678,False,Routine,Moderate Anomaly Detected,Moderate,87.937885541128,Low Health Risk
+679,False,Routine,High Risk Lesion,High,68.65438764388709,Moderate Health Risk
+680,False,Routine,Low Risk,High,98.96087773283354,Low Health Risk
+681,False,Routine,Low Risk,High,100.0,Low Health Risk
+682,False,Routine,Low Risk,High,100.0,Low Health Risk
+683,False,Routine,Low Risk,High,100.0,Low Health Risk
+684,False,Routine,Low Risk,High,98.76134790038019,Low Health Risk
+685,False,Routine,Moderate Anomaly Detected,Moderate,87.05694378442125,Low Health Risk
+686,False,Routine,Low Risk,Moderate,98.16427269116163,Low Health Risk
+687,False,Routine,Low Risk,High,100.0,Low Health Risk
+688,False,Routine,Low Risk,Moderate,99.16764469399124,Low Health Risk
+689,False,Routine,Low Risk,High,100.0,Low Health Risk
+690,False,Routine,Moderate Anomaly Detected,High,84.02653477621502,Moderate Health Risk
+691,False,Routine,Low Risk,High,99.55078061935603,Low Health Risk
+692,True,Emergency,Low Risk,Moderate,60.35544212788267,Moderate Health Risk
+693,False,Routine,Low Risk,High,98.43262005829342,Low Health Risk
+694,False,Urgent,Low Risk,High,83.07855487864977,Moderate Health Risk
+695,True,Urgent,Low Risk,High,78.07534978230444,Moderate Health Risk
+696,False,Routine,Moderate Anomaly Detected,High,84.67103436655074,Moderate Health Risk
+697,False,Routine,High Risk Lesion,Moderate,70.6222639975275,Moderate Health Risk
+698,False,Routine,Low Risk,Moderate,98.69835940498875,Low Health Risk
+699,False,Urgent,Moderate Anomaly Detected,Low,56.167335489822555,High Health Risk
+700,False,Routine,Low Risk,High,100.0,Low Health Risk
+701,False,Urgent,Low Risk,High,78.72093058724063,Moderate Health Risk
+702,True,Emergency,Low Risk,Low,53.65852509740968,High Health Risk
+703,False,Routine,Low Risk,High,99.29843667404064,Low Health Risk
+704,False,Routine,Low Risk,Moderate,99.71659796783328,Low Health Risk
+705,True,Urgent,Low Risk,Moderate,76.23221151948209,Moderate Health Risk
+706,False,Routine,Low Risk,High,98.47188993451225,Low Health Risk
+707,True,Emergency,Low Risk,High,62.19250513296034,Moderate Health Risk
+708,False,Routine,Low Risk,High,98.39797867549186,Low Health Risk
+709,False,Routine,Low Risk,High,100.0,Low Health Risk
+710,False,Routine,Moderate Anomaly Detected,High,88.51817104756934,Low Health Risk
+711,True,Urgent,Low Risk,High,80.70738789420902,Moderate Health Risk
+712,False,Emergency,Low Risk,High,64.75805973909539,Moderate Health Risk
+713,True,Routine,Low Risk,Moderate,100.0,Low Health Risk
+714,False,Routine,Moderate Anomaly Detected,Moderate,87.92588712437251,Low Health Risk
+715,False,Routine,Low Risk,High,98.61943029631529,Low Health Risk
+716,False,Routine,Low Risk,Moderate,99.87422797836454,Low Health Risk
+717,True,Emergency,High Risk Lesion,High,23.061138369495367,High Health Risk
+718,False,Routine,Moderate Anomaly Detected,Moderate,86.26928772410685,Low Health Risk
+719,False,Routine,Low Risk,Low,93.81166347168781,Low Health Risk
+720,True,Emergency,Moderate Anomaly Detected,High,45.20291579257749,High Health Risk
+721,False,Emergency,Low Risk,High,54.410145962454706,High Health Risk
+722,False,Urgent,Low Risk,Moderate,84.9841692951441,Moderate Health Risk
+723,False,Routine,Low Risk,High,98.97017710633189,Low Health Risk
+724,False,Routine,Low Risk,High,98.47295356988856,Low Health Risk
+725,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+726,False,Urgent,Low Risk,High,84.87899112358821,Moderate Health Risk
+727,False,Urgent,Low Risk,High,78.15566176583933,Moderate Health Risk
+728,False,Routine,Low Risk,Low,91.97184606527581,Low Health Risk
+729,False,Routine,Low Risk,High,100.0,Low Health Risk
+730,False,Routine,Moderate Anomaly Detected,High,85.99403183884068,Low Health Risk
+731,False,Routine,Low Risk,High,100.0,Low Health Risk
+732,False,Routine,Low Risk,High,98.02856832707297,Low Health Risk
+733,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+734,True,Emergency,Low Risk,Low,61.654303054046665,Moderate Health Risk
+735,True,Emergency,Low Risk,High,70.88986120938513,Moderate Health Risk
+736,False,Routine,Low Risk,Low,91.59643250609635,Low Health Risk
+737,False,Routine,Low Risk,Low,95.44201591311901,Low Health Risk
+738,True,Emergency,Moderate Anomaly Detected,Low,35.808549520338396,High Health Risk
+739,False,Routine,Low Risk,High,99.21287913537701,Low Health Risk
+740,False,Routine,Low Risk,High,100.0,Low Health Risk
+741,False,Routine,High Risk Lesion,High,73.88856165033688,Moderate Health Risk
+742,False,Emergency,Moderate Anomaly Detected,High,46.01103088721887,High Health Risk
+743,True,Urgent,Low Risk,High,80.34200982856844,Moderate Health Risk
+744,False,Routine,Moderate Anomaly Detected,High,91.44628856735437,Low Health Risk
+745,True,Emergency,Moderate Anomaly Detected,High,45.722329725514314,High Health Risk
+746,False,Routine,Low Risk,High,100.0,Low Health Risk
+747,False,Routine,Moderate Anomaly Detected,Moderate,87.20221091092377,Low Health Risk
+748,False,Urgent,Low Risk,High,84.42698388661572,Moderate Health Risk
+749,False,Routine,Moderate Anomaly Detected,Moderate,79.7524125493646,Moderate Health Risk
+750,True,Routine,Low Risk,Moderate,99.54515082058218,Low Health Risk
+751,False,Routine,Moderate Anomaly Detected,Low,75.90848607550741,Moderate Health Risk
+752,False,Routine,Low Risk,High,100.0,Low Health Risk
+753,True,Urgent,High Risk Lesion,High,50.4330920029841,High Health Risk
+754,False,Routine,Low Risk,Moderate,99.93419940316147,Low Health Risk
+755,False,Routine,Low Risk,High,98.85417141796137,Low Health Risk
+756,False,Urgent,Low Risk,High,75.95752440135097,Moderate Health Risk
+757,False,Routine,Low Risk,High,100.0,Low Health Risk
+758,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+759,False,Routine,Low Risk,High,99.21637854388514,Low Health Risk
+760,False,Urgent,High Risk Lesion,Low,50.711103340515464,High Health Risk
+761,False,Routine,Low Risk,High,99.33510638827919,Low Health Risk
+762,False,Routine,Moderate Anomaly Detected,High,89.52626129716202,Low Health Risk
+763,False,Routine,Low Risk,High,99.85594166976152,Low Health Risk
+764,True,Emergency,Low Risk,High,67.07197147571816,Moderate Health Risk
+765,False,Routine,Low Risk,Moderate,99.83345391770523,Low Health Risk
+766,False,Routine,Moderate Anomaly Detected,High,86.09507710545797,Low Health Risk
+767,False,Routine,Low Risk,High,100.0,Low Health Risk
+768,False,Routine,Low Risk,Low,91.86092362680168,Low Health Risk
+769,False,Routine,Low Risk,High,99.54023222287584,Low Health Risk
+770,False,Routine,Low Risk,High,100.0,Low Health Risk
+771,False,Routine,Low Risk,Low,88.4452163407333,Low Health Risk
+772,False,Routine,Low Risk,High,98.3671104258847,Low Health Risk
+773,False,Emergency,Low Risk,High,56.0792441001277,High Health Risk
+774,True,Emergency,Low Risk,High,56.97953182065992,High Health Risk
+775,False,Routine,Low Risk,High,100.0,Low Health Risk
+776,False,Routine,Moderate Anomaly Detected,Moderate,85.15906662181945,Low Health Risk
+777,False,Urgent,Low Risk,High,75.88782955858352,Moderate Health Risk
+778,False,Routine,Low Risk,Moderate,98.54890858646749,Low Health Risk
+779,False,Routine,Low Risk,High,100.0,Low Health Risk
+780,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+781,True,Urgent,Moderate Anomaly Detected,Moderate,61.09692194248278,Moderate Health Risk
+782,True,Emergency,Moderate Anomaly Detected,High,47.88917059941299,High Health Risk
+783,True,Emergency,Moderate Anomaly Detected,Moderate,38.844314313615854,High Health Risk
+784,False,Routine,High Risk Lesion,Moderate,71.58158814818616,Moderate Health Risk
+785,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+786,False,Routine,Low Risk,High,100.0,Low Health Risk
+787,True,Urgent,Moderate Anomaly Detected,Moderate,68.24124335314929,Moderate Health Risk
+788,True,Urgent,High Risk Lesion,High,49.83897132285801,High Health Risk
+789,False,Urgent,High Risk Lesion,High,60.258288177966215,Moderate Health Risk
+790,False,Routine,High Risk Lesion,High,64.4557429389844,Moderate Health Risk
+791,False,Routine,Low Risk,High,98.76091172328054,Low Health Risk
+792,False,Routine,Low Risk,High,98.41864176138593,Low Health Risk
+793,False,Routine,Low Risk,High,100.0,Low Health Risk
+794,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+795,False,Routine,Low Risk,High,100.0,Low Health Risk
+796,False,Routine,Low Risk,High,99.86807146608697,Low Health Risk
+797,False,Routine,Moderate Anomaly Detected,High,83.8337914548625,Moderate Health Risk
+798,False,Routine,Low Risk,High,98.39337968636086,Low Health Risk
+799,False,Routine,Moderate Anomaly Detected,Moderate,88.39914293832237,Low Health Risk
+800,False,Routine,Low Risk,High,100.0,Low Health Risk
+801,False,Routine,Low Risk,Moderate,99.62078857030131,Low Health Risk
+802,False,Routine,Low Risk,Low,88.84897352963463,Low Health Risk
+803,False,Routine,Low Risk,High,100.0,Low Health Risk
+804,False,Routine,Low Risk,High,99.08687039559271,Low Health Risk
+805,False,Routine,Low Risk,High,100.0,Low Health Risk
+806,False,Routine,Low Risk,Moderate,98.22650222951023,Low Health Risk
+807,True,Emergency,Low Risk,High,69.49681963994158,Moderate Health Risk
+808,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+809,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+810,False,Routine,Low Risk,Moderate,98.37423762764934,Low Health Risk
+811,True,Urgent,Low Risk,High,80.30809431962368,Moderate Health Risk
+812,False,Routine,Low Risk,Moderate,98.57550462155912,Low Health Risk
+813,True,Urgent,Low Risk,High,78.48023768250202,Moderate Health Risk
+814,True,Emergency,Moderate Anomaly Detected,High,54.98347060829122,High Health Risk
+815,False,Routine,Low Risk,Moderate,98.21162973308266,Low Health Risk
+816,False,Routine,High Risk Lesion,High,70.40455108774655,Moderate Health Risk
+817,False,Routine,Low Risk,High,100.0,Low Health Risk
+818,True,Emergency,Low Risk,Low,54.01821053315584,High Health Risk
+819,True,Urgent,Low Risk,Low,76.5952320143416,Moderate Health Risk
+820,False,Routine,Low Risk,High,100.0,Low Health Risk
+821,False,Emergency,Low Risk,High,54.690422096762276,High Health Risk
+822,False,Routine,Moderate Anomaly Detected,Moderate,85.68400226072143,Low Health Risk
+823,False,Routine,Moderate Anomaly Detected,Low,77.26674158922448,Moderate Health Risk
+824,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+825,False,Routine,Moderate Anomaly Detected,High,90.04158238557196,Low Health Risk
+826,False,Routine,Low Risk,High,98.55720935483166,Low Health Risk
+827,False,Routine,High Risk Lesion,Moderate,66.9372060529794,Moderate Health Risk
+828,False,Urgent,Low Risk,Low,74.84188427703214,Moderate Health Risk
+829,False,Routine,High Risk Lesion,High,71.6254385428702,Moderate Health Risk
+830,False,Emergency,Low Risk,High,57.306964673865046,High Health Risk
+831,False,Routine,Moderate Anomaly Detected,High,89.09921145404697,Low Health Risk
+832,True,Emergency,Low Risk,Moderate,58.90171300928186,High Health Risk
+833,False,Routine,High Risk Lesion,Moderate,71.46433362450855,Moderate Health Risk
+834,True,Urgent,Low Risk,Moderate,86.84610135730664,Low Health Risk
+835,False,Routine,Low Risk,Moderate,98.40466247845241,Low Health Risk
+836,False,Routine,Low Risk,Moderate,99.28022690754116,Low Health Risk
+837,False,Routine,Low Risk,Moderate,99.71016742143885,Low Health Risk
+838,True,Urgent,Low Risk,Moderate,82.98146421233149,Moderate Health Risk
+839,False,Routine,Moderate Anomaly Detected,High,85.24222485199408,Low Health Risk
+840,False,Routine,High Risk Lesion,High,67.45566231602763,Moderate Health Risk
+841,False,Urgent,Low Risk,High,80.62444028927287,Moderate Health Risk
+842,False,Routine,Moderate Anomaly Detected,Moderate,88.37386498021797,Low Health Risk
+843,False,Routine,Low Risk,High,100.0,Low Health Risk
+844,False,Routine,Low Risk,High,100.0,Low Health Risk
+845,False,Routine,Moderate Anomaly Detected,High,80.66613664811877,Moderate Health Risk
+846,False,Routine,Low Risk,High,98.9374803627115,Low Health Risk
+847,True,Emergency,Low Risk,Low,56.28851241985208,High Health Risk
+848,False,Routine,Low Risk,Moderate,98.01567349980438,Low Health Risk
+849,False,Routine,Moderate Anomaly Detected,Moderate,84.78660215927017,Moderate Health Risk
+850,False,Routine,Low Risk,High,99.64199485478952,Low Health Risk
+851,False,Emergency,Low Risk,High,57.3663496523622,High Health Risk
+852,False,Urgent,Low Risk,High,79.36315464948967,Moderate Health Risk
+853,True,Emergency,Low Risk,Moderate,55.728316108163234,High Health Risk
+854,False,Routine,Low Risk,High,99.95580370575381,Low Health Risk
+855,False,Routine,Low Risk,Moderate,99.11735794110623,Low Health Risk
+856,False,Routine,Low Risk,High,98.79076121245795,Low Health Risk
+857,False,Routine,Low Risk,High,98.96425738342694,Low Health Risk
+858,True,Emergency,Low Risk,High,61.48888383071294,Moderate Health Risk
+859,False,Routine,High Risk Lesion,High,65.89307367867154,Moderate Health Risk
+860,True,Emergency,Low Risk,Moderate,65.47049100702145,Moderate Health Risk
+861,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+862,True,Urgent,Low Risk,High,77.84437826282978,Moderate Health Risk
+863,True,Emergency,Low Risk,High,68.36364436783435,Moderate Health Risk
+864,False,Routine,Low Risk,High,100.0,Low Health Risk
+865,False,Routine,Low Risk,High,98.88428621125597,Low Health Risk
+866,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+867,True,Urgent,Low Risk,High,79.26257736220629,Moderate Health Risk
+868,False,Urgent,Low Risk,High,85.33291217641829,Low Health Risk
+869,False,Urgent,Low Risk,Moderate,76.27466048459277,Moderate Health Risk
+870,False,Routine,Low Risk,High,99.45826571007946,Low Health Risk
+871,False,Routine,Low Risk,Moderate,99.53578803561662,Low Health Risk
+872,False,Routine,Low Risk,High,100.0,Low Health Risk
+873,False,Routine,Moderate Anomaly Detected,Moderate,90.06565505612895,Low Health Risk
+874,False,Routine,Low Risk,High,100.0,Low Health Risk
+875,False,Routine,Moderate Anomaly Detected,High,85.44036209639305,Low Health Risk
+876,False,Routine,Low Risk,High,98.33748358575401,Low Health Risk
+877,False,Routine,Low Risk,High,98.7733569344482,Low Health Risk
+878,False,Emergency,Low Risk,Moderate,63.273512683536154,Moderate Health Risk
+879,False,Routine,Low Risk,High,99.14511944844776,Low Health Risk
+880,False,Routine,Moderate Anomaly Detected,Moderate,80.9744953005266,Moderate Health Risk
+881,False,Routine,Low Risk,High,100.0,Low Health Risk
+882,False,Routine,High Risk Lesion,High,74.2139095152859,Moderate Health Risk
+883,False,Routine,Moderate Anomaly Detected,High,83.20529911133363,Moderate Health Risk
+884,False,Routine,High Risk Lesion,Low,67.20972165243917,Moderate Health Risk
+885,False,Routine,Low Risk,High,100.0,Low Health Risk
+886,False,Routine,Moderate Anomaly Detected,High,84.42172249305239,Moderate Health Risk
+887,False,Routine,Low Risk,High,99.7624124562367,Low Health Risk
+888,False,Emergency,Low Risk,Moderate,60.18580035855849,Moderate Health Risk
+889,True,Emergency,Low Risk,Low,48.9677753729609,High Health Risk
+890,False,Routine,Moderate Anomaly Detected,Moderate,79.67479659304155,Moderate Health Risk
+891,False,Routine,High Risk Lesion,High,72.68034612979393,Moderate Health Risk
+892,False,Routine,Low Risk,High,100.0,Low Health Risk
+893,False,Routine,Low Risk,High,100.0,Low Health Risk
+894,True,Emergency,Low Risk,Low,55.85630397130995,High Health Risk
+895,True,Emergency,Low Risk,Low,58.0980257097308,High Health Risk
+896,False,Routine,Low Risk,Low,90.16658938371833,Low Health Risk
+897,False,Routine,Moderate Anomaly Detected,Moderate,81.16638781971616,Moderate Health Risk
+898,False,Routine,Moderate Anomaly Detected,High,83.14043365169593,Moderate Health Risk
+899,False,Routine,High Risk Lesion,High,71.61506409549014,Moderate Health Risk
+900,False,Routine,Low Risk,High,100.0,Low Health Risk
+901,False,Routine,Low Risk,Moderate,99.8978127193781,Low Health Risk
+902,True,Urgent,Low Risk,High,83.2039706809638,Moderate Health Risk
+903,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+904,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+905,False,Routine,Moderate Anomaly Detected,High,81.80232736726643,Moderate Health Risk
+906,False,Urgent,High Risk Lesion,High,55.24797833670491,High Health Risk
+907,False,Routine,Low Risk,Low,94.80596607332001,Low Health Risk
+908,False,Routine,Low Risk,Moderate,99.17841333176182,Low Health Risk
+909,False,Routine,Low Risk,High,100.0,Low Health Risk
+910,False,Routine,Low Risk,High,100.0,Low Health Risk
+911,True,Routine,Low Risk,High,98.31403947381443,Low Health Risk
+912,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+913,False,Routine,Low Risk,Moderate,99.64121488749065,Low Health Risk
+914,False,Routine,Low Risk,High,100.0,Low Health Risk
+915,False,Routine,Low Risk,High,100.0,Low Health Risk
+916,False,Routine,Low Risk,Low,91.65996495584041,Low Health Risk
+917,False,Routine,Moderate Anomaly Detected,High,85.6672385641959,Low Health Risk
+918,True,Urgent,Low Risk,High,82.04098093877101,Moderate Health Risk
+919,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+920,False,Urgent,Low Risk,Moderate,73.79858360408431,Moderate Health Risk
+921,False,Routine,Low Risk,High,100.0,Low Health Risk
+922,False,Routine,Low Risk,High,98.75822203414776,Low Health Risk
+923,False,Routine,Low Risk,Moderate,98.95747934536818,Low Health Risk
+924,False,Routine,Moderate Anomaly Detected,High,87.64342360919966,Low Health Risk
+925,False,Routine,Low Risk,Moderate,98.60792072989621,Low Health Risk
+926,True,Emergency,Low Risk,Moderate,61.85989194105535,Moderate Health Risk
+927,False,Routine,Low Risk,High,100.0,Low Health Risk
+928,False,Routine,Low Risk,High,98.83116185881902,Low Health Risk
+929,False,Routine,Moderate Anomaly Detected,Moderate,83.23860918164016,Moderate Health Risk
+930,False,Routine,Low Risk,High,98.90883071132802,Low Health Risk
+931,False,Routine,Low Risk,Low,88.8778192944572,Low Health Risk
+932,False,Routine,Low Risk,High,100.0,Low Health Risk
+933,False,Routine,Moderate Anomaly Detected,Moderate,89.94871175585664,Low Health Risk
+934,False,Routine,Moderate Anomaly Detected,Low,77.47508537342192,Moderate Health Risk
+935,True,Emergency,Moderate Anomaly Detected,High,51.374693405494284,High Health Risk
+936,False,Routine,Low Risk,Low,89.66741628871088,Low Health Risk
+937,False,Emergency,Low Risk,High,66.07653501433364,Moderate Health Risk
+938,False,Routine,Low Risk,High,99.14074638404018,Low Health Risk
+939,False,Routine,Low Risk,High,99.14896539189937,Low Health Risk
+940,False,Routine,Low Risk,High,100.0,Low Health Risk
+941,False,Routine,Low Risk,High,100.0,Low Health Risk
+942,False,Urgent,Moderate Anomaly Detected,Low,54.312060232228994,High Health Risk
+943,False,Routine,Low Risk,Low,90.59431048352864,Low Health Risk
+944,True,Emergency,Moderate Anomaly Detected,High,37.648004751906235,High Health Risk
+945,True,Emergency,Moderate Anomaly Detected,High,57.411139388140874,High Health Risk
+946,False,Routine,High Risk Lesion,Moderate,66.45940551975167,Moderate Health Risk
+947,True,Emergency,Low Risk,Low,59.310293662182715,High Health Risk
+948,False,Emergency,Low Risk,Moderate,54.94656078522297,High Health Risk
+949,True,Emergency,Moderate Anomaly Detected,High,49.79515129480151,High Health Risk
+950,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+951,False,Urgent,Low Risk,High,75.7900391619825,Moderate Health Risk
+952,False,Emergency,Low Risk,High,60.78556932150379,Moderate Health Risk
+953,False,Routine,Low Risk,High,99.9425229361285,Low Health Risk
+954,False,Routine,Low Risk,High,100.0,Low Health Risk
+955,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+956,False,Routine,Moderate Anomaly Detected,High,89.24367514328785,Low Health Risk
+957,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+958,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+959,False,Routine,Moderate Anomaly Detected,High,83.08348290245465,Moderate Health Risk
+960,False,Routine,Low Risk,High,99.61215503162853,Low Health Risk
+961,False,Routine,Low Risk,Moderate,98.63569906737669,Low Health Risk
+962,True,Emergency,Moderate Anomaly Detected,High,48.698420819909714,High Health Risk
+963,False,Routine,Moderate Anomaly Detected,High,84.78452296000373,Moderate Health Risk
+964,False,Routine,Low Risk,High,99.43929960254627,Low Health Risk
+965,False,Routine,Low Risk,High,100.0,Low Health Risk
+966,False,Routine,Moderate Anomaly Detected,High,83.27856846381928,Moderate Health Risk
+967,True,Urgent,Moderate Anomaly Detected,Moderate,68.94953725724669,Moderate Health Risk
+968,True,Emergency,High Risk Lesion,High,29.047692025441037,High Health Risk
+969,False,Routine,Low Risk,Low,96.29713573893132,Low Health Risk
+970,False,Routine,Moderate Anomaly Detected,Moderate,82.95449077678664,Moderate Health Risk
+971,False,Routine,Low Risk,High,98.96497734415212,Low Health Risk
+972,False,Routine,Low Risk,High,98.08423113422528,Low Health Risk
+973,True,Emergency,Moderate Anomaly Detected,High,39.32282788729892,High Health Risk
+974,False,Routine,Low Risk,Moderate,98.03767942388978,Low Health Risk
+975,False,Routine,Low Risk,High,99.05986824622177,Low Health Risk
+976,False,Routine,Low Risk,High,98.07195252628955,Low Health Risk
+977,False,Routine,Low Risk,Moderate,99.94833017729431,Low Health Risk
+978,False,Routine,Low Risk,High,100.0,Low Health Risk
+979,False,Routine,High Risk Lesion,Low,57.860541226457094,High Health Risk
+980,False,Routine,High Risk Lesion,High,72.94369049495695,Moderate Health Risk
+981,False,Routine,Low Risk,High,100.0,Low Health Risk
+982,False,Routine,Low Risk,High,98.13179147298212,Low Health Risk
+983,False,Routine,Low Risk,High,100.0,Low Health Risk
+984,False,Routine,Low Risk,High,100.0,Low Health Risk
+985,False,Routine,High Risk Lesion,High,70.65125071120833,Moderate Health Risk
+986,True,Urgent,Moderate Anomaly Detected,Low,62.42345675120926,Moderate Health Risk
+987,False,Urgent,Low Risk,Moderate,83.91133028431565,Moderate Health Risk
+988,False,Routine,Low Risk,Moderate,98.68939685657985,Low Health Risk
+989,False,Routine,Low Risk,Moderate,100.0,Low Health Risk
+990,False,Routine,Moderate Anomaly Detected,Moderate,85.56987894559306,Low Health Risk
+991,True,Emergency,Low Risk,Moderate,61.81269655398711,Moderate Health Risk
+992,True,Emergency,Low Risk,Moderate,66.14693264164507,Moderate Health Risk
+993,False,Routine,Low Risk,High,100.0,Low Health Risk
+994,True,Emergency,Low Risk,Moderate,57.11730421491651,High Health Risk
+995,False,Routine,High Risk Lesion,High,72.9004810103855,Moderate Health Risk
+996,False,Routine,Low Risk,High,99.88546593763138,Low Health Risk
+997,True,Emergency,Low Risk,Moderate,61.13165558037054,Moderate Health Risk
+998,False,Routine,Low Risk,High,100.0,Low Health Risk
+999,False,Routine,High Risk Lesion,High,72.09888750802824,Moderate Health Risk
+1000,False,Routine,Moderate Anomaly Detected,Low,70.96329394526907,Moderate Health Risk
