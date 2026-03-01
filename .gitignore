@@ -1,1 +1,3 @@
 .ipynb_checkpoints
+datasets/
+best_model.pth
