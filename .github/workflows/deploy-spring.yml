@@ -1,0 +1,118 @@
+name: Deploy Spring API to EC2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/spring-api/**'
+      - '.github/workflows/deploy-spring.yml'
+  workflow_dispatch:
+
+env:
+  DOCKERHUB_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/clearsight-spring-api
+
+jobs:
+  # ─────────────────────────────────────────────
+  # Job 1: Build & push image to Docker Hub
+  # ─────────────────────────────────────────────
+  build-and-push:
+    name: Build & Push Spring API Image
+    runs-on: ubuntu-latest
+
+    outputs:
+      image_tag: ${{ steps.meta.outputs.version }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.DOCKERHUB_IMAGE }}
+          tags: |
+            type=sha,prefix=,suffix=,format=short
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Set up JDK 21 for caching
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build and push Spring API image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend/spring-api
+          file: ./backend/spring-api/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # ─────────────────────────────────────────────
+  # Job 2: Deploy to EC2 via SSH
+  # ─────────────────────────────────────────────
+  deploy:
+    name: Deploy Spring API to EC2
+    runs-on: ubuntu-latest
+    needs: build-and-push
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy docker-compose.prod.yml to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "infra/docker-compose.prod.yml"
+          target: "~/clearsight"
+          strip_components: 1
+
+      - name: Deploy on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+            cd ~/clearsight
+
+            # Write / refresh environment file from secrets
+            cat > .env <<EOF
+            DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
+            SPRING_DATA_MONGODB_URI=${{ secrets.MONGODB_ATLAS_URI }}
+            SPRING_DATA_MONGODB_DATABASE=clearsight
+            GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}
+            GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}
+            JWT_SECRET=${{ secrets.JWT_SECRET }}
+            JWT_EXPIRATION_MS=86400000
+            FASTAPI_BASE_URL=http://fastapi:8000
+            FASTAPI_INTERNAL_SECRET=${{ secrets.FASTAPI_INTERNAL_SECRET }}
+            FRONTEND_URL=${{ secrets.FRONTEND_URL }}
+            EOF
+
+            # Pull the latest Spring API image
+            docker pull ${{ env.DOCKERHUB_IMAGE }}:latest
+
+            # Restart only spring-api (leaves fastapi & mongo untouched)
+            docker compose -f docker-compose.prod.yml up -d --no-deps --force-recreate spring-api
+
+            # Clean up dangling images to save disk on t3.micro
+            docker image prune -f

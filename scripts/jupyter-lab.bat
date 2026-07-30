@@ -1,0 +1,2 @@
+cd ../notebook
+jupyter lab

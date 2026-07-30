@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: clearsight-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  fastapi:
+    build:
+      context: ../backend/fast-api
+      dockerfile: Dockerfile
+    container_name: clearsight-fastapi
+    ports:
+      - "8000:8000"
+    environment:
+      - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
+      - MODEL_PATH=/app/notebook/best_model.pth
+    volumes:
+      - ../notebook:/app/notebook:ro
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  spring-api:
+    build:
+      context: ../backend/spring-api
+      dockerfile: Dockerfile
+    container_name: clearsight-spring-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      mongo:
+        condition: service_healthy
+      fastapi:
+        condition: service_healthy
+    environment:
+      - SERVER_PORT=8080
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/clearsight
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - JWT_SECRET=${JWT_SECRET:-super_secret_jwt_signing_key_for_clearsight_demo_2026}
+      - FASTAPI_BASE_URL=http://fastapi:8000
+      - FASTAPI_URL=http://fastapi:8000
+      - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:5173}
+
+  frontend:
+    build:
+      context: ../dashboard
+      dockerfile: Dockerfile
+    container_name: clearsight-dashboard
+    ports:
+      - "5173:80"
+    depends_on:
+      - spring-api
+
+volumes:
+  mongodata:

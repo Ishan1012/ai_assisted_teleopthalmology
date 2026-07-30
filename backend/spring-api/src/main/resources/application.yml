@@ -1,0 +1,31 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: spring-gateway-auth
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/clearsight}
+      database: ${SPRING_DATA_MONGODB_DATABASE:clearsight}
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - email
+              - profile
+              - openid
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+
+jwt:
+  secret: ${JWT_SECRET:9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b}
+  expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+fastapi:
+  base-url: ${FASTAPI_BASE_URL:http://localhost:8000}
+  internal-secret: ${FASTAPI_INTERNAL_SECRET:clearsight_internal_secret_key_2026}

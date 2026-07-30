@@ -1,0 +1,56 @@
+# Production docker-compose — pulled on EC2 from Docker Hub images.
+# Do NOT use `build:` here. All images are pre-built by GitHub Actions.
+#
+# Usage on EC2:
+#   docker compose -f docker-compose.prod.yml up -d
+#
+# Required .env file in same directory (written by CI or manually):
+#   DOCKERHUB_USERNAME, SPRING_DATA_MONGODB_URI, GOOGLE_CLIENT_ID,
+#   GOOGLE_CLIENT_SECRET, JWT_SECRET, FASTAPI_INTERNAL_SECRET, FRONTEND_URL
+
+version: '3.8'
+
+services:
+
+  # ── FastAPI (port 8000) ────────────────────────────────────────────────────
+  fastapi:
+    image: ${DOCKERHUB_USERNAME}/clearsight-fastapi:latest
+    container_name: clearsight-fastapi
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
+      - MODEL_PATH=/app/notebook/best_model.pth
+    volumes:
+      # Mount the model file from the EC2 host.
+      # Copy best_model.pth to ~/clearsight/notebook/ before first run.
+      - ./notebook:/app/notebook:ro
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ── Spring Boot API (port 8081) ────────────────────────────────────────────
+  spring-api:
+    image: ${DOCKERHUB_USERNAME}/clearsight-spring-api:latest
+    container_name: clearsight-spring-api
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    depends_on:
+      fastapi:
+        condition: service_healthy
+    environment:
+      - SERVER_PORT=8081
+      - SPRING_DATA_MONGODB_URI=${SPRING_DATA_MONGODB_URI}
+      - SPRING_DATA_MONGODB_DATABASE=${SPRING_DATA_MONGODB_DATABASE:-clearsight}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRATION_MS=${JWT_EXPIRATION_MS:-86400000}
+      - FASTAPI_BASE_URL=http://fastapi:8000
+      - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
+      - FRONTEND_URL=${FRONTEND_URL}
