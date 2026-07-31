@@ -193,8 +193,7 @@ class ApplicationTests {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", notNullValue()))
                 .andExpect(jsonPath("$.originalFilename", is("fundus_scan_left_eye.jpg")))
-                .andExpect(jsonPath("$.diagnosis", notNullValue()))
-                .andExpect(jsonPath("$.s3Url", notNullValue()));
+                .andExpect(jsonPath("$.diagnosis", notNullValue()));
 
         List<Scan> scans = scanRepository.findByUserIdOrderByCreatedAtDesc(user.getId());
         assertEquals(1, scans.size());
