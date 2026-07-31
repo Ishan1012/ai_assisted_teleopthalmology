@@ -93,6 +93,9 @@ jobs:
             MODEL_PATH=/app/notebook/best_model.pth
             EOF
 
+            # Prune old images/containers BEFORE pulling to prevent 'no space left on device' on t3.micro
+            docker system prune -af --volumes || true
+
             docker pull ${{ env.DOCKERHUB_IMAGE }}:latest
             docker compose -f docker-compose.fastapi.yml up -d --no-deps --force-recreate fastapi
             docker image prune -f

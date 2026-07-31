@@ -107,6 +107,9 @@ jobs:
             FRONTEND_URL=${{ secrets.FRONTEND_URL }}
             EOF
 
+            # Prune old images/containers BEFORE pulling to prevent 'no space left on device' on t3.micro
+            docker system prune -af --volumes || true
+
             docker pull ${{ env.DOCKERHUB_IMAGE }}:latest
             docker compose -f docker-compose.spring.yml up -d --no-deps --force-recreate spring-api
             docker image prune -f
