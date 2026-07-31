@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { ImageUploader } from '../components/ImageUploader'
+import { IpWebcamCapture } from '../components/IpWebcamCapture'
 import { ResultCard } from '../components/ResultCard'
 import { api, type ScanResponse } from '../services/api'
 import { Play, RotateCcw, AlertTriangle, BarChart3, Cpu, Layers } from 'lucide-react'
@@ -12,6 +13,7 @@ export function DashboardPage() {
   const [result, setResult] = useState<ScanResponse | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<'prediction' | 'roc' | 'matrix' | 'radar'>('prediction')
+  const [imageSourceMode, setImageSourceMode] = useState<'upload' | 'camera'>('upload')
 
   const handleSelectImage = (file: File) => {
     setSelectedFile(file)
@@ -23,6 +25,11 @@ export function DashboardPage() {
     setSelectedFile(null)
     setResult(null)
     setError(null)
+  }
+
+  const handleModeChange = (mode: 'upload' | 'camera') => {
+    setImageSourceMode(mode)
+    handleClear()
   }
 
   const handleAnalyze = async () => {
@@ -73,7 +80,7 @@ export function DashboardPage() {
           Glaucoma Screening Dashboard
         </h1>
         <p className="text-xs text-neutral-500 max-w-xl">
-          Upload a retinal fundus scan or select a sample research scan below to generate instant automated glaucoma risk evaluation.
+          Upload a retinal fundus scan or capture directly from a mobile camera feed below to generate instant automated glaucoma risk evaluation.
         </p>
       </div>
 
@@ -83,12 +90,48 @@ export function DashboardPage() {
           <div className="bg-white p-6 border border-neutral-200 rounded-xl shadow-sm space-y-4">
             <h3 className="text-sm font-semibold text-neutral-900">Fundus Image Source</h3>
 
-            <ImageUploader
-              onSelectImage={handleSelectImage}
-              onClear={handleClear}
-              selectedFile={selectedFile}
-              disabled={loading}
-            />
+            {/* Segmented Tab Toggle Buttons */}
+            <div className="flex items-center gap-1 bg-neutral-100 p-1 rounded-lg border border-neutral-200 text-xs">
+              <button
+                type="button"
+                onClick={() => handleModeChange('upload')}
+                disabled={loading}
+                className={`flex-1 inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-md font-semibold transition-all ${
+                  imageSourceMode === 'upload'
+                    ? 'bg-white text-neutral-900 shadow-sm border border-neutral-200'
+                    : 'text-neutral-600 hover:text-neutral-900'
+                }`}
+              >
+                <span>📁 Upload File</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => handleModeChange('camera')}
+                disabled={loading}
+                className={`flex-1 inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-md font-semibold transition-all ${
+                  imageSourceMode === 'camera'
+                    ? 'bg-white text-neutral-900 shadow-sm border border-neutral-200'
+                    : 'text-neutral-600 hover:text-neutral-900'
+                }`}
+              >
+                <span>📱 Mobile Camera</span>
+              </button>
+            </div>
+
+            {imageSourceMode === 'upload' ? (
+              <ImageUploader
+                onSelectImage={handleSelectImage}
+                onClear={handleClear}
+                selectedFile={selectedFile}
+                disabled={loading}
+              />
+            ) : (
+              <IpWebcamCapture
+                onCapture={handleSelectImage}
+                onClear={handleClear}
+                disabled={loading}
+              />
+            )}
 
             {selectedFile && (
               <div className="flex items-center gap-3 pt-2">

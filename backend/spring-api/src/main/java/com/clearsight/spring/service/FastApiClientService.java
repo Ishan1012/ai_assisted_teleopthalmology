@@ -52,6 +52,7 @@ public class FastApiClientService {
             ScreeningResponseDto response = restTemplate.postForObject(endpoint, requestEntity, ScreeningResponseDto.class);
 
             if (response != null) {
+                response.populateDerivedFields();
                 return response;
             }
         } catch (Exception e) {

@@ -1,7 +1,7 @@
-import im094 from './Im094_ACRIMAfe.png'
-import im177 from './Im177_ACRIMAfe.png'
-import im393 from './Im393_g_ACRIMAfe.png'
-import drishti015 from './drishtiGS_015fe.png'
+import sample1 from './sample_fundus_1.jpg'
+import sample2 from './sample_fundus_2.jpg'
+import sample3 from './sample_fundus_3.jpg'
+import sample4 from './sample_fundus_4.jpg'
 
 import confusionMatrix from './confusion_matrix.png'
 import flowChart1 from './flow_chart.png'
@@ -37,40 +37,40 @@ export interface SampleFundusImage {
 
 export const SAMPLE_FUNDUS_IMAGES: SampleFundusImage[] = [
   {
-    id: 'acrima-094',
-    name: 'ACRIMA Sample #094',
+    id: 'fundus-sample-1',
+    name: 'Fundus Scan #1',
     dataset: 'ACRIMA Clinical Dataset',
     diagnosis: 'Glaucoma Indicated',
-    description: 'Optic cup enlargement with significant neuroretinal rim thinning.',
-    url: im094,
-    filename: 'Im094_ACRIMAfe.png',
+    description: 'Deep vertical cup-to-disc ratio enlargement with neuroretinal rim thinning.',
+    url: sample1,
+    filename: 'sample_fundus_1.jpg',
   },
   {
-    id: 'acrima-177',
-    name: 'ACRIMA Sample #177',
+    id: 'fundus-sample-2',
+    name: 'Fundus Scan #2',
     dataset: 'ACRIMA Clinical Dataset',
     diagnosis: 'Glaucoma Indicated',
-    description: 'Pathological glaucomatous damage with vertical optic disc cupping.',
-    url: im177,
-    filename: 'Im177_ACRIMAfe.png',
+    description: 'Elevated cup-to-disc ratio with marked vascular nasal bending.',
+    url: sample2,
+    filename: 'sample_fundus_2.jpg',
   },
   {
-    id: 'acrima-393',
-    name: 'ACRIMA Sample #393',
-    dataset: 'ACRIMA Clinical Dataset',
-    diagnosis: 'Normal / Control',
-    description: 'Healthy neuroretinal rim structure with normal cup-to-disc ratio.',
-    url: im393,
-    filename: 'Im393_g_ACRIMAfe.png',
-  },
-  {
-    id: 'drishti-015',
-    name: 'Drishti-GS Sample #015',
+    id: 'fundus-sample-3',
+    name: 'Fundus Scan #3',
     dataset: 'Drishti-GS Benchmark',
     diagnosis: 'Glaucoma Indicated',
-    description: 'Standardized optic nerve head scan from Drishti-GS dataset.',
-    url: drishti015,
-    filename: 'drishtiGS_015fe.png',
+    description: 'Optic nerve head cupping with temporal neuroretinal rim loss.',
+    url: sample3,
+    filename: 'sample_fundus_3.jpg',
+  },
+  {
+    id: 'fundus-sample-4',
+    name: 'Fundus Scan #4',
+    dataset: 'Drishti-GS Benchmark',
+    diagnosis: 'Glaucoma Indicated',
+    description: 'Significant neuroretinal rim notch and pathological optic disc cupping.',
+    url: sample4,
+    filename: 'sample_fundus_4.jpg',
   },
 ]
 

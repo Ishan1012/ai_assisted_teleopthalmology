@@ -50,6 +50,12 @@ public class ScanController {
         }
 
         ScreeningResponseDto screeningResult = fastApiClientService.screenScan(file);
+        screeningResult.populateDerivedFields();
+
+        String pipelineJsonStr = null;
+        if (screeningResult.getPipelineJson() != null) {
+            pipelineJsonStr = screeningResult.getPipelineJson().toString();
+        }
 
         Scan scan = Scan.builder()
                 .userId(currentUser.getId())
@@ -59,7 +65,7 @@ public class ScanController {
                 .isPathological(screeningResult.getIsPathological())
                 .riskLevel(screeningResult.getRiskLevel())
                 .recommendation(screeningResult.getRecommendation())
-                .pipelineJson(screeningResult.getPipelineJson())
+                .pipelineJson(pipelineJsonStr)
                 .build();
 
         Scan savedScan = scanRepository.save(scan);

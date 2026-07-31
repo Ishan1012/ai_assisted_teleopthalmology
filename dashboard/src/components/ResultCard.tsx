@@ -6,38 +6,88 @@ interface ResultCardProps {
 }
 
 export function ResultCard({ result }: ResultCardProps) {
-  // Derive pathological status from diagnosis or isPathological flag
-  const isGlaucoma =
-    result.isPathological === true ||
-    (result.diagnosis?.toLowerCase().includes('glaucoma') ?? false)
+  // Determine risk category (HIGH, MODERATE, LOW)
+  const recUpper = result.recommendation?.toUpperCase() ?? ''
+  const riskUpper = result.riskLevel?.toUpperCase() ?? ''
+  const diagUpper = result.diagnosis?.toUpperCase() ?? ''
 
-  // confidence is 0–1 from Spring (forwarded from FastAPI), scale to percent
-  const confPercent =
+  let riskCategory: 'HIGH' | 'MODERATE' | 'LOW' = 'LOW'
+
+  if (
+    riskUpper.includes('HIGH') ||
+    diagUpper.includes('GLAUCOMA') ||
+    result.isPathological === true ||
+    recUpper.includes('HIGH RISK') ||
+    recUpper.includes('GLAUCOMA')
+  ) {
+    riskCategory = 'HIGH'
+  } else if (riskUpper.includes('MODERATE') || recUpper.includes('MODERATE')) {
+    riskCategory = 'MODERATE'
+  }
+
+  // Derive confidence percentage from result.confidence or parse regex from recommendation text (e.g. "89.8%")
+  let confPercent =
     result.confidence != null
       ? Math.round(
           result.confidence > 1 ? result.confidence : result.confidence * 100
         )
       : null
 
-  const riskLabel = result.riskLevel ?? (isGlaucoma ? 'High Risk' : 'Low Risk')
-  const diagnosisLabel = result.diagnosis ?? (isGlaucoma ? 'Glaucoma Indicated' : 'Normal / Low Risk')
+  if (confPercent == null && result.recommendation) {
+    const match = result.recommendation.match(/(\d+(?:\.\d+)?)\s*%/)
+    if (match && match[1]) {
+      confPercent = Math.round(parseFloat(match[1]))
+    }
+  }
+
+  // Color & Theme Mapping
+  const style = {
+    HIGH: {
+      text: 'text-red-600',
+      badge: 'bg-red-600 text-white border-red-600',
+      iconBg: 'bg-red-600 text-white',
+      progress: 'bg-red-600',
+      progressWidth: '90%',
+      riskText: 'HIGH',
+      label: result.riskLevel ?? 'High Risk',
+      diagnosis: result.diagnosis ?? 'Glaucoma Indicated',
+    },
+    MODERATE: {
+      text: 'text-amber-600',
+      badge: 'bg-amber-500 text-white border-amber-500',
+      iconBg: 'bg-amber-500 text-white',
+      progress: 'bg-amber-500',
+      progressWidth: '55%',
+      riskText: 'MODERATE',
+      label: result.riskLevel ?? 'Moderate Risk',
+      diagnosis: result.diagnosis ?? 'Moderate Risk Suspected',
+    },
+    LOW: {
+      text: 'text-emerald-600',
+      badge: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+      iconBg: 'bg-emerald-100 border border-emerald-300 text-emerald-700',
+      progress: 'bg-emerald-500',
+      progressWidth: '15%',
+      riskText: 'LOW',
+      label: result.riskLevel ?? 'Low Risk',
+      diagnosis: result.diagnosis ?? 'Normal / Low Risk',
+    },
+  }[riskCategory]
 
   return (
     <div className="bg-white border border-neutral-200 rounded-xl p-6 shadow-sm space-y-6 animate-fade-in">
       {/* Header Banner */}
       <div className="flex items-center justify-between border-b border-neutral-100 pb-4">
         <div className="flex items-center gap-3">
-          {isGlaucoma ? (
-            <div className="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center">
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center ${style.iconBg}`}>
+            {riskCategory === 'HIGH' ? (
               <AlertCircle className="w-5 h-5" />
-            </div>
-          ) : (
-            <div className="w-10 h-10 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-900 flex items-center justify-center">
+            ) : (
               <CheckCircle2 className="w-5 h-5" />
-            </div>
-          )}
+            )}
+          </div>
           <div>
-            <h3 className="text-lg font-bold text-neutral-900">{diagnosisLabel}</h3>
+            <h3 className="text-lg font-bold text-neutral-900">{style.diagnosis}</h3>
             <p className="text-xs text-neutral-500 font-mono flex items-center gap-1">
               <FileImage className="w-3 h-3" />
               {result.originalFilename ?? 'Unknown file'}
@@ -45,14 +95,8 @@ export function ResultCard({ result }: ResultCardProps) {
           </div>
         </div>
 
-        <span
-          className={`px-3 py-1 text-xs font-semibold rounded-full border ${
-            isGlaucoma
-              ? 'bg-neutral-900 text-white border-neutral-900'
-              : 'bg-neutral-100 text-neutral-800 border-neutral-300'
-          }`}
-        >
-          {riskLabel}
+        <span className={`px-3 py-1 text-xs font-semibold rounded-full border ${style.badge}`}>
+          {style.label}
         </span>
       </div>
 
@@ -64,13 +108,13 @@ export function ResultCard({ result }: ResultCardProps) {
             <span>Pathological Risk</span>
             <Activity className="w-3.5 h-3.5 text-neutral-400" />
           </div>
-          <div className={`text-2xl font-extrabold font-mono ${isGlaucoma ? 'text-neutral-900' : 'text-neutral-500'}`}>
-            {isGlaucoma ? 'HIGH' : 'LOW'}
+          <div className={`text-2xl font-extrabold font-mono ${style.text}`}>
+            {style.riskText}
           </div>
           <div className="w-full bg-neutral-200 h-1.5 rounded-full mt-2 overflow-hidden">
             <div
-              className={`h-full transition-all duration-500 ${isGlaucoma ? 'bg-neutral-900' : 'bg-neutral-400'}`}
-              style={{ width: isGlaucoma ? '85%' : '15%' }}
+              className={`h-full transition-all duration-500 ${style.progress}`}
+              style={{ width: style.progressWidth }}
             />
           </div>
         </div>
