@@ -97,7 +97,7 @@ jobs:
             # Write / refresh environment file from secrets
             cat > .env <<EOF
             DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
-            SPRING_DATA_MONGODB_URI=${{ secrets.MONGODB_ATLAS_URI }}
+            SPRING_DATA_MONGODB_URI=${{ secrets.MONGODB_ATLAS_URI || secrets.SPRING_DATA_MONGODB_URI }}
             SPRING_DATA_MONGODB_DATABASE=clearsight
             GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}
             GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}

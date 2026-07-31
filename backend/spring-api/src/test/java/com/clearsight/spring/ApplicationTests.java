@@ -67,6 +67,18 @@ class ApplicationTests {
     }
 
     @Test
+    @DisplayName("Health endpoint /health and /api/health should return 'api is live'")
+    void testHealthCheck() throws Exception {
+        mockMvc.perform(get("/health"))
+                .andExpect(status().isOk())
+                .andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().string("api is live"));
+
+        mockMvc.perform(get("/api/health"))
+                .andExpect(status().isOk())
+                .andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().string("api is live"));
+    }
+
+    @Test
     @DisplayName("Register Endpoint /api/auth/register should create user and return JWT token")
     void testUserRegistration() throws Exception {
         RegisterRequest registerRequest = RegisterRequest.builder()

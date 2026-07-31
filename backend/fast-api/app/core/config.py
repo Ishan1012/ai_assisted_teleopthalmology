@@ -42,7 +42,7 @@ class Settings:
     # Allowed CORS origins restricted to Spring Boot Gateway / internal service
     ALLOWED_ORIGINS: list[str] = [
         origin.strip()
-        for origin in os.getenv("CORS_ORIGINS", "http://localhost:8081,http://spring-api:8080").split(",")
+        for origin in os.getenv("CORS_ORIGINS", "https://api.clearsighteye.app,https://clearsighteye.app,http://localhost:8081,http://spring-api:8080,http://spring-api:8081").split(",")
         if origin.strip()
     ]
 
