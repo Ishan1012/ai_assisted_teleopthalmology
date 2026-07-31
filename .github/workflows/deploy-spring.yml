@@ -74,27 +74,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Copy docker-compose.prod.yml to EC2
+      - name: Copy docker-compose.spring.yml to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          source: "infra/docker-compose.prod.yml"
+          host: ${{ secrets.EC2_SPRING_HOST }}
+          username: ${{ secrets.EC2_SPRING_USER }}
+          key: ${{ secrets.EC2_SPRING_SSH_KEY }}
+          source: "infra/docker-compose.spring.yml"
           target: "~/clearsight"
           strip_components: 1
 
       - name: Deploy on EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
+          host: ${{ secrets.EC2_SPRING_HOST }}
+          username: ${{ secrets.EC2_SPRING_USER }}
+          key: ${{ secrets.EC2_SPRING_SSH_KEY }}
           script: |
             set -e
             cd ~/clearsight
 
-            # Write / refresh environment file from secrets
             cat > .env <<EOF
             DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
             SPRING_DATA_MONGODB_URI=${{ secrets.MONGODB_ATLAS_URI || secrets.SPRING_DATA_MONGODB_URI }}
@@ -103,16 +102,11 @@ jobs:
             GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}
             JWT_SECRET=${{ secrets.JWT_SECRET }}
             JWT_EXPIRATION_MS=86400000
-            FASTAPI_BASE_URL=http://fastapi:8000
+            FASTAPI_BASE_URL=https://inference.clearsighteye.app
             FASTAPI_INTERNAL_SECRET=${{ secrets.FASTAPI_INTERNAL_SECRET }}
             FRONTEND_URL=${{ secrets.FRONTEND_URL }}
             EOF
 
-            # Pull the latest Spring API image
             docker pull ${{ env.DOCKERHUB_IMAGE }}:latest
-
-            # Restart only spring-api (leaves fastapi & mongo untouched)
-            docker compose -f docker-compose.prod.yml up -d --no-deps --force-recreate spring-api
-
-            # Clean up dangling images to save disk on t3.micro
+            docker compose -f docker-compose.spring.yml up -d --no-deps --force-recreate spring-api
             docker image prune -f

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fastapi:
+    image: ${DOCKERHUB_USERNAME}/clearsight-fastapi:latest
+    container_name: clearsight-fastapi
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
+      - MODEL_PATH=/app/notebook/best_model.pth
+    volumes:
+      - ./notebook:/app/notebook:ro
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s

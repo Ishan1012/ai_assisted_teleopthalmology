@@ -67,38 +67,32 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Copy docker-compose.prod.yml to EC2
+      - name: Copy docker-compose.fastapi.yml to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          source: "infra/docker-compose.prod.yml"
+          host: ${{ secrets.EC2_FASTAPI_HOST }}
+          username: ${{ secrets.EC2_FASTAPI_USER }}
+          key: ${{ secrets.EC2_FASTAPI_SSH_KEY }}
+          source: "infra/docker-compose.fastapi.yml"
           target: "~/clearsight"
-          strip_components: 1        # lands as ~/clearsight/docker-compose.prod.yml
+          strip_components: 1        # lands as ~/clearsight/docker-compose.fastapi.yml
 
       - name: Deploy on EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
+          host: ${{ secrets.EC2_FASTAPI_HOST }}
+          username: ${{ secrets.EC2_FASTAPI_USER }}
+          key: ${{ secrets.EC2_FASTAPI_SSH_KEY }}
           script: |
             set -e
             cd ~/clearsight
 
-            # Write / refresh environment file from secrets
             cat > .env <<EOF
             DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
             FASTAPI_INTERNAL_SECRET=${{ secrets.FASTAPI_INTERNAL_SECRET }}
             MODEL_PATH=/app/notebook/best_model.pth
             EOF
 
-            # Pull the latest FastAPI image
             docker pull ${{ env.DOCKERHUB_IMAGE }}:latest
-
-            # Restart only the fastapi service (leaves spring-api & mongo untouched)
-            docker compose -f docker-compose.prod.yml up -d --no-deps --force-recreate fastapi
-
-            # Clean up dangling images to save disk on t3.micro
+            docker compose -f docker-compose.fastapi.yml up -d --no-deps --force-recreate fastapi
             docker image prune -f

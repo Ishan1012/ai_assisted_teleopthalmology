@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  spring-api:
+    image: ${DOCKERHUB_USERNAME}/clearsight-spring-api:latest
+    container_name: clearsight-spring-api
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:8081"
+    environment:
+      - SERVER_PORT=8081
+      - SPRING_DATA_MONGODB_URI=${SPRING_DATA_MONGODB_URI}
+      - SPRING_DATA_MONGODB_DATABASE=${SPRING_DATA_MONGODB_DATABASE:-clearsight}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - JWT_SECRET=${JWT_SECRET:-9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b}
+      - JWT_EXPIRATION_MS=${JWT_EXPIRATION_MS:-86400000}
+      - FASTAPI_BASE_URL=https://inference.clearsighteye.app
+      - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
+      - FRONTEND_URL=${FRONTEND_URL}
