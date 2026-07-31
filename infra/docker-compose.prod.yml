@@ -18,7 +18,7 @@ services:
     container_name: clearsight-fastapi
     restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     environment:
       - FASTAPI_INTERNAL_SECRET=${FASTAPI_INTERNAL_SECRET:-clearsight_internal_secret_key_2026}
       - MODEL_PATH=/app/notebook/best_model.pth
@@ -39,7 +39,7 @@ services:
     container_name: clearsight-spring-api
     restart: unless-stopped
     ports:
-      - "8081:8081"
+      - "127.0.0.1:8081:8081"
     depends_on:
       fastapi:
         condition: service_healthy

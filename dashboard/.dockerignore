@@ -1,0 +1,35 @@
+# ── Node dependencies ─────────────────────────────────────────
+# npm ci inside the Dockerfile installs these fresh from package-lock.json
+node_modules/
+
+# ── Build output ─────────────────────────────────────────────
+# The Dockerfile runs `npm run build` and the output goes to dist/
+# Exclude any local dist/ so stale builds are never copied in.
+dist/
+
+# ── Environment & secrets ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── TypeScript / Vite cache ───────────────────────────────────
+*.tsbuildinfo
+.vite/
+
+# ── Testing ───────────────────────────────────────────────────
+coverage/
+*.test.ts
+*.spec.ts
+
+# ── IDE & OS ──────────────────────────────────────────────────
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+
+# ── Git ───────────────────────────────────────────────────────
+.git/
+.gitignore
+
+# ── Docs & misc ───────────────────────────────────────────────
+*.md

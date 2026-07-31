@@ -1,0 +1,34 @@
+# ── Maven build output ────────────────────────────────────────
+# The multi-stage Dockerfile runs `mvn package` inside the builder
+# image, so the local target/ dir is never needed in the context.
+target/
+
+# ── Environment & secrets ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── IDE & editor ──────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# ── OS artifacts ──────────────────────────────────────────────
+*.DS_Store
+Thumbs.db
+
+# ── Git ───────────────────────────────────────────────────────
+.git/
+.gitignore
+.gitattributes
+
+# ── Maven wrapper (not needed — builder image has mvn) ────────
+# Keep .mvn/ and mvnw* so the Dockerfile can use them if needed.
+# Exclude only the Windows wrapper binary to save a few KB.
+mvnw.cmd
+
+# ── Test reports ─────────────────────────────────────────────
+**/surefire-reports/
+**/failsafe-reports/
