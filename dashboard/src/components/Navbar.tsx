@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
-import { Eye, LogOut, User as UserIcon, LogIn, UserPlus } from 'lucide-react'
+import { LogOut, LogIn, UserPlus } from 'lucide-react'
 
 export function Navbar() {
   const { user, logout } = useAuth()
@@ -12,9 +12,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 font-semibold text-neutral-900 tracking-tight text-lg group">
-          <div className="w-8 h-8 rounded-lg bg-neutral-900 text-white flex items-center justify-center transition-transform group-hover:scale-105">
-            <Eye className="w-5 h-5 stroke-[2.2]" />
-          </div>
+          <img src="/mascot.png" alt="ClearSight Logo" className="w-8 h-8 object-contain transition-transform group-hover:scale-105" />
           <span>ClearSight</span>
           <span className="text-[10px] font-mono uppercase bg-neutral-100 text-neutral-600 px-1.5 py-0.5 rounded border border-neutral-200 ml-1">
             Research AI
@@ -57,7 +55,7 @@ export function Navbar() {
                 {user.picture ? (
                   <img src={user.picture} alt={user.name} className="w-6 h-6 rounded-full" />
                 ) : (
-                  <UserIcon className="w-4 h-4 text-neutral-600" />
+                  <img src="/mascot.png" alt="User Avatar" className="w-6 h-6 object-contain rounded-full bg-white p-0.5 border border-neutral-200" />
                 )}
                 <span className="text-xs font-medium text-neutral-800">{user.name || user.email}</span>
               </div>

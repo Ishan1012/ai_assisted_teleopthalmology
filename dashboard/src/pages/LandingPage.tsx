@@ -374,6 +374,135 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* NEW SECTION 1: AI Mascot Triage Assistant Showcase */}
+      <section className="bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-neutral-500 to-neutral-300 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+              <div className="relative bg-white p-4 rounded-3xl border border-neutral-200 shadow-xl flex flex-col items-center text-center">
+                <img
+                  src="/mascot.png"
+                  alt="Dr. Fox AI Assistant"
+                  className="w-36 h-36 object-contain transform group-hover:scale-105 transition-transform duration-300"
+                />
+                <span className="mt-3 px-3 py-1 bg-neutral-900 text-white text-[11px] font-mono font-bold rounded-full border border-neutral-700">
+                  Dr. Fox — AI Clinical Assistant
+                </span>
+                <p className="text-[11px] text-neutral-500 mt-1 max-w-[200px]">
+                  Guided Screening &amp; Optic Nerve Head Risk Triage
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-8 space-y-6 text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-neutral-200 text-xs font-mono border border-white/10">
+              <Sparkles className="w-3.5 h-3.5 text-white" />
+              <span>Smart Medical Assistant Co-Pilot</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-snug">
+              Meet Your Intelligent Tele-Ophthalmology Assistant
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
+              Integrated directly into the screening workflow, Dr. Fox assists healthcare technicians by guiding fundus image capture quality, highlighting key cup-to-disc ratio anomalies, and delivering transparent risk evaluations without delay.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-2">
+                <div className="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                  <Activity className="w-4 h-4" />
+                </div>
+                <h4 className="text-xs font-bold text-white">Instant Triage</h4>
+                <p className="text-[11px] text-neutral-400 leading-normal">
+                  Classifies fundus scans into Risk Categories in under 2 seconds.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-2">
+                <div className="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                  <BrainCircuit className="w-4 h-4" />
+                </div>
+                <h4 className="text-xs font-bold text-white">Fuzzy Rule XAI</h4>
+                <p className="text-[11px] text-neutral-400 leading-normal">
+                  Provides human-interpretable ANFIS membership rule explanations.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-2">
+                <div className="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <h4 className="text-xs font-bold text-white">Zero Storage</h4>
+                <p className="text-[11px] text-neutral-400 leading-normal">
+                  Scans are evaluated in-memory without persistent cloud image storage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION 2: Clinical Impact & Multi-Dataset Validation Benchmark */}
+      <section className="space-y-8">
+        <div className="text-center space-y-2">
+          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-600 bg-neutral-100 px-3 py-1 rounded-full border border-neutral-200">
+            <TrendingUp className="w-3.5 h-3.5 text-neutral-800" />
+            <span>Clinical Benchmark Metrics</span>
+          </div>
+          <h2 className="text-3xl font-black text-neutral-900 tracking-tight">
+            Multi-Dataset Validation &amp; Global Impact
+          </h2>
+          <p className="text-sm text-neutral-500 max-w-xl mx-auto">
+            Rigorously evaluated across clinical datasets from diverse demographics and camera hardware.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm space-y-2 text-center">
+            <div className="text-3xl sm:text-4xl font-black text-neutral-900 font-mono">98.4%</div>
+            <div className="text-xs font-bold text-neutral-800">Overall Accuracy</div>
+            <p className="text-[11px] text-neutral-500">Achieved on independent ACRIMA clinical test split</p>
+          </div>
+
+          <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm space-y-2 text-center">
+            <div className="text-3xl sm:text-4xl font-black text-neutral-900 font-mono">0.992</div>
+            <div className="text-xs font-bold text-neutral-800">ROC AUC Score</div>
+            <p className="text-[11px] text-neutral-500">Superior discrimination between normal &amp; glaucomatous eyes</p>
+          </div>
+
+          <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm space-y-2 text-center">
+            <div className="text-3xl sm:text-4xl font-black text-neutral-900 font-mono">&lt; 2.0s</div>
+            <div className="text-xs font-bold text-neutral-800">Inference Speed</div>
+            <p className="text-[11px] text-neutral-500">Optimized PyTorch CPU pipeline on lightweight EC2</p>
+          </div>
+
+          <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm space-y-2 text-center">
+            <div className="text-3xl sm:text-4xl font-black text-neutral-900 font-mono">100%</div>
+            <div className="text-xs font-bold text-neutral-800">Explainable Logic</div>
+            <p className="text-[11px] text-neutral-500">Every decision mapped to ANFIS membership rule strengths</p>
+          </div>
+        </div>
+
+        <div className="bg-white border border-neutral-200 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 max-w-xl">
+            <h3 className="text-xl font-bold text-neutral-900">
+              Designed for Low-Resource Tele-Ophthalmology Deployment
+            </h3>
+            <p className="text-xs text-neutral-600 leading-relaxed">
+              Glaucoma is the leading cause of irreversible blindness worldwide, affecting over 80 million people. ClearSight provides a fast, accurate triage co-pilot for primary health centers where trained ophthalmologists are unavailable.
+            </p>
+          </div>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold px-6 py-3 rounded-xl transition-all shadow hover:shadow-md flex-shrink-0"
+          >
+            <span>Explore Full Paper Metrics</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
     </div>
   )
 }

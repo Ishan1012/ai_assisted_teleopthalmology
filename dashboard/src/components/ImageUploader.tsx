@@ -110,8 +110,11 @@ export function ImageUploader({ onSelectImage, onClear, selectedFile, disabled }
               : 'border-neutral-300 hover:border-neutral-500 bg-white hover:bg-neutral-50/50'
           } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          <div className="w-11 h-11 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center mb-3">
-            <Upload className="w-5 h-5 text-neutral-700" />
+          <div className="relative mb-2">
+            <img src="/mascot.png" alt="ClearSight Doctor Mascot" className="w-12 h-12 object-contain transition-transform group-hover:scale-105" />
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-neutral-900 text-white flex items-center justify-center border-2 border-white shadow-sm">
+              <Upload className="w-3 h-3" />
+            </div>
           </div>
           <h4 className="text-sm font-semibold text-neutral-900 mb-1">
             Upload Retinal Fundus Image

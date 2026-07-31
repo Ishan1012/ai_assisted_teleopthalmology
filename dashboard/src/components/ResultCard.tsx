@@ -101,8 +101,8 @@ export function ResultCard({ result }: ResultCardProps) {
 
       {/* CDR Educational Explanation */}
       <div className="p-4 rounded-lg bg-neutral-50 border border-neutral-200 text-xs text-neutral-700 space-y-1.5">
-        <div className="flex items-center gap-1.5 font-semibold text-neutral-900">
-          <Info className="w-4 h-4 text-neutral-600" />
+        <div className="flex items-center gap-2 font-semibold text-neutral-900">
+          <img src="/mascot.png" alt="Doctor Fox Assistant" className="w-6 h-6 object-contain" />
           <span>Optic Cup-to-Disc Ratio (CDR) Assessment</span>
         </div>
         <p className="leading-relaxed">

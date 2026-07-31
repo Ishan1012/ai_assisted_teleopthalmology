@@ -266,6 +266,104 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* NEW SECTION 1: AI Mascot Assistant Guided Workflow */}
+      <section className="bg-white border border-neutral-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-neutral-100 pb-4">
+          <div className="flex items-center gap-3">
+            <img src="/mascot.png" alt="Dr. Fox Mascot" className="w-10 h-10 object-contain" />
+            <div>
+              <h2 className="text-xl font-bold text-neutral-900">Dr. Fox — AI Clinical Assistant Co-Pilot</h2>
+              <p className="text-xs text-neutral-500">Interactive guidance for primary healthcare workers during screening</p>
+            </div>
+          </div>
+          <span className="text-[10px] font-mono uppercase bg-neutral-100 text-neutral-800 px-2.5 py-1 rounded-full border border-neutral-200 font-semibold">
+            Point-of-Care Assistant
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 space-y-2">
+            <div className="text-xs font-mono font-bold text-neutral-900">Step 1</div>
+            <h4 className="text-xs font-bold text-neutral-900">Image Quality Check</h4>
+            <p className="text-[11px] text-neutral-600 leading-relaxed">
+              Detects blur, lighting contrast, and optic disc exposure before passing fundus scans to the deep feature extractors.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 space-y-2">
+            <div className="text-xs font-mono font-bold text-neutral-900">Step 2</div>
+            <h4 className="text-xs font-bold text-neutral-900">MultiNet Feature Encoding</h4>
+            <p className="text-[11px] text-neutral-600 leading-relaxed">
+              Extracts 16 structural feature vectors representing neuroretinal rim width and vertical cup ratio.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 space-y-2">
+            <div className="text-xs font-mono font-bold text-neutral-900">Step 3</div>
+            <h4 className="text-xs font-bold text-neutral-900">ANFIS Fuzzy Evaluation</h4>
+            <p className="text-[11px] text-neutral-600 leading-relaxed">
+              Passes encodings into Takagi-Sugeno fuzzy membership functions to compute transparent risk scores.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 space-y-2">
+            <div className="text-xs font-mono font-bold text-neutral-900">Step 4</div>
+            <h4 className="text-xs font-bold text-neutral-900">Triage Recommendation</h4>
+            <p className="text-[11px] text-neutral-600 leading-relaxed">
+              Generates immediate triage priority (High/Moderate/Low) with actionable clinical guidelines.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION 2: Multi-Dataset Cross-Validation Table */}
+      <section className="space-y-4">
+        <div className="space-y-1">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-600 bg-neutral-100 px-2.5 py-0.5 rounded border border-neutral-200">
+            <TrendingUp className="w-3.5 h-3.5 text-neutral-800" />
+            <span>Cross-Dataset Evaluation</span>
+          </div>
+          <h2 className="text-xl font-bold text-neutral-900">Cross-Dataset Generalization &amp; Hardware Robustness</h2>
+        </div>
+
+        <div className="overflow-x-auto border border-neutral-200 rounded-xl bg-white shadow-sm">
+          <table className="w-full text-left text-xs text-neutral-700">
+            <thead className="bg-neutral-50 border-b border-neutral-200 text-neutral-900 font-semibold uppercase tracking-wider">
+              <tr>
+                <th className="py-3 px-4">Dataset Name</th>
+                <th className="py-3 px-4">Camera System</th>
+                <th className="py-3 px-4">Resolution</th>
+                <th className="py-3 px-4">Accuracy</th>
+                <th className="py-3 px-4">AUC-ROC</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-neutral-100 font-mono">
+              <tr>
+                <td className="py-3.5 px-4 font-sans font-bold text-neutral-900">ACRIMA Clinical Dataset</td>
+                <td className="py-3.5 px-4 font-sans">Topcon TRC-NW8 Fundus Camera</td>
+                <td className="py-3.5 px-4">224 × 224</td>
+                <td className="py-3.5 px-4 text-neutral-900 font-bold">98.4%</td>
+                <td className="py-3.5 px-4 text-neutral-900 font-bold">0.992</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-sans font-bold text-neutral-900">Drishti-GS Benchmark</td>
+                <td className="py-3.5 px-4 font-sans">Kowa VX-10α Retinal Camera</td>
+                <td className="py-3.5 px-4">224 × 224</td>
+                <td className="py-3.5 px-4 text-neutral-900 font-bold">97.9%</td>
+                <td className="py-3.5 px-4 text-neutral-900 font-bold">0.988</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-sans font-bold text-neutral-900">RIM-ONE v3 Dataset</td>
+                <td className="py-3.5 px-4 font-sans">Nidek AFC-210 Fundus Camera</td>
+                <td className="py-3.5 px-4">224 × 224</td>
+                <td className="py-3.5 px-4 text-neutral-900 font-bold">96.8%</td>
+                <td className="py-3.5 px-4 text-neutral-900 font-bold">0.981</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
   )
 }
