@@ -73,6 +73,17 @@ public class ScanController {
         return ResponseEntity.ok(mapToScanResponseDto(savedScan));
     }
 
+    @PostMapping("/report")
+    public ResponseEntity<?> generateReport(@org.springframework.web.bind.annotation.RequestBody com.clearsight.spring.dto.ReportRequestDto requestDto) {
+        User currentUser = getCurrentAuthenticatedUser();
+        if (currentUser == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Not authenticated");
+        }
+
+        com.clearsight.spring.dto.ClinicalReportResponseDto reportResponse = fastApiClientService.generateReport(requestDto);
+        return ResponseEntity.ok(reportResponse);
+    }
+
     @GetMapping
     public ResponseEntity<?> getUserScans() {
         User currentUser = getCurrentAuthenticatedUser();

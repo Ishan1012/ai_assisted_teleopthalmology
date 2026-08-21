@@ -1,11 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import type { ScanResponse } from '../services/api'
-import { AlertCircle, CheckCircle2, Info, Activity, FileImage } from 'lucide-react'
+import { AlertCircle, CheckCircle2, Info, Activity, FileImage, Sparkles, ArrowRight } from 'lucide-react'
 
 interface ResultCardProps {
   result: ScanResponse
 }
 
 export function ResultCard({ result }: ResultCardProps) {
+  const navigate = useNavigate()
   // Determine risk category (HIGH, MODERATE, LOW)
   const recUpper = result.recommendation?.toUpperCase() ?? ''
   const riskUpper = result.riskLevel?.toUpperCase() ?? ''
@@ -167,6 +169,32 @@ export function ResultCard({ result }: ResultCardProps) {
           </p>
         </div>
       )}
+
+      {/* RAG Clinical Decision Support Report CTA */}
+      <div className="border-t border-neutral-100 pt-4">
+        <button
+          onClick={() => navigate('/report', { state: { scanResult: result } })}
+          className="w-full inline-flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white transition-all shadow group cursor-pointer"
+        >
+          <div className="flex items-center gap-2.5 text-left">
+            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+              <Sparkles className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold flex items-center gap-1.5">
+                <span>Generate Clinical Decision Support Report</span>
+                <span className="px-1.5 py-0.2 bg-emerald-500/20 text-emerald-300 text-[10px] rounded border border-emerald-500/30">
+                  RAG
+                </span>
+              </div>
+              <div className="text-[11px] text-neutral-400">
+                Synthesize guideline-grounded report with Gemini 2.0 &amp; Atlas
+              </div>
+            </div>
+          </div>
+          <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
 
       {/* Pipeline debug info (only if available) */}
       {result.pipelineJson && (

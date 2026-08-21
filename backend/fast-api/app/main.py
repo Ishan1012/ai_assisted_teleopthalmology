@@ -3,11 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.routes.screening_routes import router as screening_router
 from app.routes.analytics_routes import router as analytics_router
+from app.routes.report_routes import router as report_router
+from app.routes.admin_routes import router as admin_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION,
-    description="Backend API for MultiNet-ANFIS Glaucoma Tele-Ophthalmology Screening Dashboard"
+    description="Backend API for MultiNet-ANFIS Glaucoma Tele-Ophthalmology Screening Dashboard with RAG"
 )
 
 # Enable CORS strictly for backend / Spring Boot origins
@@ -20,6 +22,8 @@ app.add_middleware(
 )
 
 app.include_router(screening_router, prefix=settings.API_V1_STR)
+app.include_router(report_router, prefix=settings.API_V1_STR)
+app.include_router(admin_router, prefix=settings.API_V1_STR)
 app.include_router(analytics_router, prefix=settings.API_V1_STR)
 
 @app.get("/")

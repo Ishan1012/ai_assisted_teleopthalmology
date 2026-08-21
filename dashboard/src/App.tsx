@@ -7,6 +7,7 @@ import { AboutPage } from './pages/AboutPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { LoginPage } from './pages/LoginPage'
 import { RegisterPage } from './pages/RegisterPage'
+import { ReportPage } from './pages/ReportPage'
 import { ProtectedRoute } from './components/ProtectedRoute'
 import './App.css'
 
@@ -27,6 +28,14 @@ export function App() {
                 element={
                   <ProtectedRoute>
                     <DashboardPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/report"
+                element={
+                  <ProtectedRoute>
+                    <ReportPage />
                   </ProtectedRoute>
                 }
               />

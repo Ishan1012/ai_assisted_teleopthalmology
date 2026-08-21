@@ -54,6 +54,18 @@ class Settings:
     NUM_RULES: int = 8
     ANFIS_DIM: int = 16
 
+    # Gemini & MongoDB Atlas RAG Configuration
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+    EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "models/text-embedding-004")
+    EMBEDDING_DIM: int = int(os.getenv("EMBEDDING_DIM", "768"))
+    
+    MONGODB_ATLAS_URI: str = os.getenv("MONGODB_ATLAS_URI", "")
+    MONGODB_DB_NAME: str = os.getenv("MONGODB_DB_NAME", "clearsight")
+    VECTOR_COLLECTION: str = os.getenv("VECTOR_COLLECTION", "clinical_chunks")
+    VECTOR_INDEX_NAME: str = os.getenv("VECTOR_INDEX_NAME", "vector_index")
+    TOP_K_CHUNKS: int = int(os.getenv("TOP_K_CHUNKS", "5"))
+
 
 settings = Settings()
 
